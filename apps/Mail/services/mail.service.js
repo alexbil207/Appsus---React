@@ -1,7 +1,7 @@
 'use strict';
 import { storageService } from '../../../services/storage-service.js';
 import { utilService } from '../../../services/util-service.js';
-import { gMails } from './mail.data.service.js';
+import { mailDataService } from './mail.data.service.js';
 
 export const mailService = {
     createMails,
@@ -11,14 +11,14 @@ export const mailService = {
 }
 const KEY = 'mails';
 function query() {
-    const mails = storageService.loadFromStorage(KEY) ? storageService.loadFromStorage(KEY) : gMails;
+    const mails = storageService.loadFromStorage(KEY) ? storageService.loadFromStorage(KEY) : mailDataService.gMails;
     return Promise.resolve(mails)
 
 }
 
 
 function createMails() {
-    gMails.push(_createMail());
+    mailDataService.gMails.push(_createMail());
     _saveBooksToStorage();
 }
 
@@ -29,7 +29,7 @@ function _getMailById(mailId, isIdx = false) {
 }
 
 function removeMail(mailId) {
-    const Idx = _getMailById(mailId, true)
+    const idx = _getMailById(mailId, true)
     gMails.slice(1, idx);
     _saveBooksToStorage();
 }
@@ -54,7 +54,7 @@ function _createMail() {
 }
 
 function _saveBooksToStorage() {
-    storageService.saveToStorage(KEY, gMails);
+    storageService.saveToStorage(KEY, mailDataService.gMails);
 }
 
 

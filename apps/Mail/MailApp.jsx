@@ -15,6 +15,10 @@ export class MailApp extends React.Component {
             this.setState({ mails: res })
         })
     }
+    removeMail = (mail) => {
+        mailService.removeMail(mail.id).then(() => this.loadMails())
+
+    }
     render() {
         const { mails } = this.state;
         if (!mails) return (
@@ -26,7 +30,7 @@ export class MailApp extends React.Component {
         return (
             <React.Fragment>
                 <MailFilter />
-                <MailList mails={mails} />
+                <MailList mails={mails} removeMail={this.removeMail} />
 
             </React.Fragment>
         )

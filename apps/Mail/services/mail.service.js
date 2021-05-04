@@ -7,13 +7,19 @@ export const mailService = {
     createMails,
     query,
     removeMail,
+    favoriteUpdate,
 
 }
-const KEY = 'mails';
-function query() {
-    const mails = storageService.loadFromStorage(KEY) ? storageService.loadFromStorage(KEY) : mailDataService.gMails;
-    return Promise.resolve(mails)
 
+const KEY = 'mails';
+
+function query() {
+    const mails = storageService.loadFromStorage(KEY)
+    if (mails) {
+        return Promise.resolve(mails)
+    }
+    _saveBooksToStorage();
+    return Promise.resolve(mailDataService.gMails)
 }
 
 
@@ -24,14 +30,24 @@ function createMails() {
 
 function _getMailById(mailId, isIdx = false) {
     const mails = storageService.loadFromStorage(KEY);
-    if (isIdx) return Promise.resolve(mails.findIdx(mail => mail.id === mailId))
+    if (isIdx) return Promise.resolve(mails.findIndex(mail => mail.id === mailId))
     return Promise.resolve(mails.find(mail => mail.id === mailId))
 }
 
 function removeMail(mailId) {
     const idx = _getMailById(mailId, true)
-    gMails.slice(1, idx);
-    _saveBooksToStorage();
+    const mails = storageService.loadFromStorage(KEY);
+    mails.splice(idx, 1)
+    storageService.saveToStorage(KEY, mails);
+    return Promise.resolve();
+}
+
+function favoriteUpdate(mailId, isFavorite) {
+    const mails = storageService.loadFromStorage(KEY);
+    _getMailById(mailId, true).then(res => {
+        mails[res].isFavorite = isFavorite;
+        storageService.saveToStorage(KEY, mails)
+    })
 }
 
 function _createMail() {

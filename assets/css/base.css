@@ -5,3 +5,23 @@
     margin: 0;
     padding: 0;
 }
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: #eeeef0;
+}
+
+.btn {
+    padding: 10px;
+    box-shadow: 0 0 3px 1px #a59c9c;
+}
+
+.btn:active {
+    position: relative;
+    top: 3px;
+}

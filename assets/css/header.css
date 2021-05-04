@@ -1,0 +1,16 @@
+/*### Header ###*/
+
+.header-container {
+    border-bottom: 1px solid #ceced4;
+}
+
+.nav-btn img {
+    margin: 10px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
+
+.logo {
+    flex: 2;
+}

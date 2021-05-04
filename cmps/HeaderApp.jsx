@@ -5,11 +5,12 @@ export class HeaderApp extends React.Component {
     state = {
         isMenuShown: false,
     }
+
     render() {
         const { isMenuShown } = this.state;
         return (
             <React.Fragment>
-                <div className="header-container container flex align-center">
+                <div className="header-container container flex align-center space-between">
                     <div className="logo">
                         <Link to='/'><h1>App/sus</h1></Link>
                     </div>

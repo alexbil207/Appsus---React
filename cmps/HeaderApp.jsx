@@ -1,15 +1,26 @@
-
-export function HeaderApp() {
-    return (
-        <React.Fragment>
-            <div className="header-container container flex align-center">
-                <div className="logo">
-                    <h1>LOGO</h1>
+import { MenuList } from '../cmps/MenuList.jsx'
+export class HeaderApp extends React.Component {
+    state = {
+        isMenuShown: false,
+    }
+    render() {
+        const { isMenuShown } = this.state;
+        return (
+            <React.Fragment>
+                <div className="header-container container flex align-center">
+                    <div className="logo">
+                        <h1>LOGO</h1>
+                    </div>
+                    <div className="nav-btn">
+                        <img src="../assets/icons/menu.svg" onClick={() => {
+                            this.setState({ isMenuShown: !isMenuShown })
+                        }} />
+                    </div>
                 </div>
-                <div className="nav-btn">
-                    <img src="../assets/icons/menu.svg" />
+                <div className={isMenuShown ? 'menu-container grid' : 'menu-container hidden'}>
+                    {isMenuShown && <MenuList />}
                 </div>
-            </div>
-        </React.Fragment>
-    )
+            </React.Fragment>
+        )
+    }
 }

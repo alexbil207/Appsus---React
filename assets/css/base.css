@@ -5,16 +5,18 @@
     margin: 0;
     padding: 0;
 }
-
+body{
+    background-image: url('../img/background-2.jpg');
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+}
 a {
     outline: none;
     text-decoration: none;
     color: inherit;
 }
 
-header {
-    background-color: #eeeef0;
-}
 
 .btn {
     padding: 10px;

@@ -5,18 +5,29 @@
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url('../img/background-2.jpg');
     background-size: cover;
     background-position: bottom;
     height: 100vh;
 }
+
+img {
+    padding: 5px;
+    height: 60px;
+    width: 60px;
+}
+
 a {
     outline: none;
     text-decoration: none;
     color: inherit;
 }
 
+.hidden {
+    display: none;
+}
 
 .btn {
     padding: 10px;

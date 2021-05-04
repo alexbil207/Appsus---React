@@ -13,7 +13,7 @@ export function App() {
             </header>
             <main className="app">
                 <Switch>
-                    {/* <Route component={Home} path='/' /> */}
+                    <Route component={Home} path='/' />
                 </Switch>
             </main>
             <footer>

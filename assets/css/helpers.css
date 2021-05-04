@@ -1,0 +1,44 @@
+/*#### HELPERS ####*/
+
+/*## flex helpers ##*/
+
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/*## grid helpers ##*/
+
+.grid {
+    display: grid;
+}
+
+/*## container helpers ##*/
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}

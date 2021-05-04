@@ -1,5 +1,9 @@
 /*### About ###*/
 
+body {
+    background-color: #F0F0F2;
+}
+
 .about, .img-container h2 {
     margin-top: 30px;
 }

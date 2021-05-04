@@ -6,11 +6,11 @@
     padding: 0;
 }
 
-body .home-img{
+body .home-img {
     background-image: url('../img/background-2.jpg');
     background-size: cover;
     background-position: bottom;
-    height: 100vh;
+    height: calc(100vh - 85px)
 }
 
 a {

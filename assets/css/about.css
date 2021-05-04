@@ -4,6 +4,10 @@ body {
     background-color: #F0F0F2;
 }
 
+.about {
+    flex-wrap: wrap;
+}
+
 .about, .img-container h2 {
     margin-top: 30px;
 }

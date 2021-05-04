@@ -14,6 +14,8 @@ export function App() {
             </header>
             <main className="app">
                 <Switch>
+                    {/* <Route component={Note} path='/Note' />
+                    <Route component={Mail} path='/Mail' /> */}
                     <Route component={Home} path='/' />
                 </Switch>
             </main>

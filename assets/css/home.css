@@ -1,6 +1,8 @@
 /*### Home Page ###*/
 
-
+* {
+    color: #810000;
+}
 
 .hero {
     height: 40vh;
@@ -10,6 +12,7 @@
     margin-top: 100px;
     text-align: center;
     font-family: 'Bebas Neue', cursive;
-    letter-spacing: 2px;
-    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    font-size: 2.5rem;
+
 }

@@ -8,7 +8,7 @@ export class Home extends React.Component {
             <section className="home">
                 <div className="hero container flex column align-center space-between">
                     <h2>Welcome to your digital workspace</h2>
-                    <Link to="" className="btn btn-hero">Get Started</Link>
+                    <Link to="" className="btn btn-hero animate__animated animate__zoomIn">Get Started</Link>
                 </div>
             </section>
         )

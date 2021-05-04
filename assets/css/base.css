@@ -5,22 +5,35 @@
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-image: url('../img/background-2.jpg');
     background-size: cover;
     background-position: bottom;
     height: 100vh;
 }
+
 a {
     outline: none;
     text-decoration: none;
     color: inherit;
 }
 
-
 .btn {
+    background-color: #810000;
+    color: white;
     padding: 10px;
     box-shadow: 0 0 3px 1px #a59c9c;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+    font-size: 1.7rem;
+    letter-spacing: 0.3rem;
+}
+
+.btn:hover {
+    /* background-color: white;
+    color: #810000; */
+    font-size: 2.1rem;
 }
 
 .btn:active {

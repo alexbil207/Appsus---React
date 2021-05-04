@@ -13,7 +13,8 @@
 }
 
 .logo {
-    font-size: 2.2rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.3rem;
     flex: 2;
 }
 

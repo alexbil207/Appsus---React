@@ -32,7 +32,7 @@ a {
 .btn {
     background-color: #810000;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     box-shadow: 0 0 3px 1px #a59c9c;
     transition-duration: 0.5s;
     border-radius: 10px;
@@ -43,7 +43,7 @@ a {
 .btn:hover {
     /* background-color: white;
     color: #810000; */
-    font-size: 2.1rem;
+    /* font-size: 2.1rem; */
 }
 
 .btn:active {

@@ -10,10 +10,10 @@
     height: 40px;
     width: 40px;
     cursor: pointer;
-    fill: red;
 }
 
 .logo {
+    color: #810000;
     font-family: 'Bebas Neue', cursive;
     font-size: 1.3rem;
     flex: 2;
@@ -35,6 +35,9 @@
 
 a img {
     opacity: 0.6;
+    padding: 5px;
+    height: 60px;
+    width: 60px;
 }
 
 a img:hover {

@@ -13,12 +13,6 @@ body {
     height: 100vh;
 }
 
-img {
-    padding: 5px;
-    height: 60px;
-    width: 60px;
-}
-
 a {
     outline: none;
     text-decoration: none;

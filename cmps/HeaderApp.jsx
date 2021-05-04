@@ -1,3 +1,5 @@
+const { Link } = ReactRouterDOM;
+
 import { MenuList } from '../cmps/MenuList.jsx'
 export class HeaderApp extends React.Component {
     state = {
@@ -9,7 +11,7 @@ export class HeaderApp extends React.Component {
             <React.Fragment>
                 <div className="header-container container flex align-center">
                     <div className="logo">
-                        <h1>App/sus</h1>
+                        <Link to='/'><h1>App/sus</h1></Link>
                     </div>
                     <div className="nav-btn">
                         <img src="../assets/icons/menu.svg" onClick={() => {

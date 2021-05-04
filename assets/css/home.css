@@ -1,14 +1,11 @@
 /*### Home Page ###*/
 
-* {
-    color: #810000;
-}
-
 .hero {
     height: 40vh;
 }
 
 .hero h2 {
+    color: #810000;
     margin-top: 50px;
     text-align: center;
     font-family: 'Bebas Neue', cursive;

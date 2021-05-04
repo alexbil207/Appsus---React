@@ -1,0 +1,24 @@
+/*### About ###*/
+
+.about, .img-container h2 {
+    margin-top: 30px;
+}
+
+.img-container {
+    flex: 1;
+}
+
+.img-container img {
+    height: 300px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.img-container h2 {
+    color: #810000;
+}
+
+.img-container p {
+    width: 300px;
+    margin-bottom: 30px;
+}

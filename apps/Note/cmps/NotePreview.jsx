@@ -34,8 +34,8 @@ export class NotePreview extends React.Component {
                         {note.txt}
                     </textarea>
                     <p>created at {new Date(note.createdAt).toLocaleString()}</p>
-                    <button onClick={() => removeNote(note)}>🗑️</button>
-                    <button>Pin</button>
+                    <button className="btn" onClick={() => removeNote(note)}>🗑️</button>
+                    <button className="btn">Pin</button>
                 </article>
             </React.Fragment>
 
@@ -43,6 +43,4 @@ export class NotePreview extends React.Component {
     }
 }
 
-//show time in readable format
-// new Date().toLocaleString()
 

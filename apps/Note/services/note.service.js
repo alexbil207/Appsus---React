@@ -35,6 +35,48 @@ var gNotes = [
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
     // {
     //     id: 2,
     //     type: "NoteImg",

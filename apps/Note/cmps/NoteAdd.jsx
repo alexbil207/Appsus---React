@@ -21,7 +21,7 @@ export class NoteAdd extends React.Component {
                 <label>
                     <input name="txt" type="text" placeholder="Enter your text"
                         onChange={this.handleChange} />
-                    <button onClick={() => addNote(txt)}>Add</button>
+                    <button className="btn" onClick={() => addNote(txt)}>Add</button>
 
                 </label>
             </div>

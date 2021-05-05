@@ -37,12 +37,14 @@ export class NoteApp extends React.Component {
         if (!notes) return <div>Loading...</div>
         return (
             <React.Fragment>
-                <section className="container">
+                <div className="container note-add">
                     <NoteAdd addNote={this.addNote} />
-                </section>
-                <section className="container note-app">
+                </div>
+
+                <div className="container note-container">
                     <NoteList notes={notes} removeNote={this.removeNote} />
-                </section>
+                </div>
+
             </React.Fragment>
         )
     }

@@ -1,30 +1,48 @@
+import { noteService } from '../services/note.service.js'
 
-export function NotePreview({ note }) {
-    // if (note.type === "NoteText")
-    //     return (
-    //         console.log('text')
-    // )
+export class NotePreview extends React.Component {
+    state = {
+        note: null,
+        type: null,
+        isPinned: false,
+    }
 
+    componentDidMount() {
+        const { note } = this.props;
+        this.setState({ note })
+    }
 
-    return (
+    handleChange = ({ target }) => {
+        const field = target.name
+        const value = target.value
+        this.setState(prevState => ({
+            note: {
+                [field]: value
+            }
+        }))
+    }
 
+    render() {
+        const { note } = this.state;
+        const { removeNote } = this.props;
+        if (!note) return <h1>Loading...</h1>
+        return (
+            <React.Fragment>
 
-        <article className='note-preview'>
-            <p> note id -{note.id}</p>
-            
-            <textarea id={note.id} value={note.info.txt} rows="10" cols="20">
-            {note.info.txt}
-            </textarea>
+                <article className='note-preview'>
+                    <textarea id={note.id} value={note.txt} onChange={this.handleChange} rows="10" cols="20">
+                        {note.txt}
+                    </textarea>
+                    <p>created at {new Date(note.createdAt).toLocaleString()}</p>
+                    <button onClick={() => removeNote(note)}>🗑️</button>
+                    <button>Pin</button>
+                </article>
+            </React.Fragment>
 
-            <p>created at {note.createdAt}</p>
-            <button>Delete</button>
-            <button>Pin</button>
-        </article>
-
-
-        //   <article className='note-preview'>
-        //     <img src={'https://robohash.org/'} alt="" />
-        //     <p>Text - {note.info.txt}</p>
-        //   </article>
-    )
+        )
+    }
 }
+
+//show time in readable format
+// new Date().toLocaleString()
+

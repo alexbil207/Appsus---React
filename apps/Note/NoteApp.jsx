@@ -1,7 +1,7 @@
 const { Link } = ReactRouterDOM
 import { noteService } from './services/note.service.js'
 import { NoteList } from '../Note/cmps/NoteList.jsx'
-import { NotePreview } from '../Note/cmps/NotePreview.jsx'
+import { NoteAdd } from '../Note/cmps/NoteAdd.jsx'
 
 export class NoteApp extends React.Component {
     state = {
@@ -16,24 +16,31 @@ export class NoteApp extends React.Component {
     }
 
     loadNotes() {
-        noteService.query(this.state.filterBy)
-            .then((notes) => {
-                console.log(notes);
-                this.setState({ notes })
+        noteService.query().then(notes => {
+                this.setState(prevState=>({...prevState, notes}))
             })
     }
 
-
-
+    removeNote = (note) => {
+        noteService.removeNote(note.id).then(() => this.loadNotes())
+        console.log('removing');
+    }
+    
     render() {
         const { notes, filterBy } = this.state
         if (!notes) return <div>Loading...</div>
         return (
+            <React.Fragment>
+                <section className="container">
+                <NoteAdd />
+                </section>
             <section className="container note-app">
-                <h1>Hello Notes</h1>
-                {/* <NotePreview notes={notes}/> */}
-                <NoteList notes={notes} />
+
+                <NoteList notes={notes} removeNote={this.removeNote} />
             </section>
+            </React.Fragment>
         )
     }
 }
+
+

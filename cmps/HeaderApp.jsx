@@ -5,7 +5,10 @@ export class HeaderApp extends React.Component {
     state = {
         isMenuShown: false,
     }
-
+    closeMenu = () => {
+        const { isMenuShown } = this.state;
+        this.setState({ isMenuShown: !isMenuShown })
+    }
     render() {
         const { isMenuShown } = this.state;
         return (
@@ -15,13 +18,11 @@ export class HeaderApp extends React.Component {
                         <Link to='/'><h1>App/sus</h1></Link>
                     </div>
                     <div className="nav-btn">
-                        <img src="../assets/icons/menu.svg" onClick={() => {
-                            this.setState({ isMenuShown: !isMenuShown })
-                        }} />
+                        <img src="../assets/icons/menu.svg" onClick={this.closeMenu} />
                     </div>
                 </div>
                 <div className={isMenuShown ? 'menu-container grid' : 'menu-container hidden'}>
-                    {isMenuShown && <MenuList />}
+                    {isMenuShown && <MenuList closeMenu={this.closeMenu} />}
                 </div>
             </React.Fragment>
         )

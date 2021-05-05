@@ -17,27 +17,21 @@ var gNotes = [
         id: 1,
         type: "NoteText",
         isPinned: true,
-        info: {
-            txt: "Fullstack Me Baby!"
-        },
+        txt: "Fullstack Me Baby!",
         createdAt: Date.now()
     },
     {
         id: 4,
         type: "NoteText",
         isPinned: true,
-        info: {
-            txt: "I like to move it"
-        },
+        txt: "I like to move it",
         createdAt: Date.now()
     },
     {
         id: 5,
         type: "NoteText",
         isPinned: true,
-        info: {
-            txt: "Another note bites the dust"
-        },
+        txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     // {
@@ -73,13 +67,8 @@ function query() {
 }
 
 
-
-function _updateNote() {
-
-}
-
-
 function removeNote(noteId) {
+    console.log('service removing');
     var noteIdx = gNotes.findIndex(function (note) {
         return noteId === note.id
     })

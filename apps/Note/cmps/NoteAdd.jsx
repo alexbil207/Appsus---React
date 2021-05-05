@@ -1,5 +1,4 @@
 
-import { noteService } from '../services/note.service.js'
 
 export class NoteAdd extends React.Component {
     state = {

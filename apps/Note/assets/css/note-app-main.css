@@ -17,7 +17,7 @@
 textarea {
     resize: none;
     color: white;
-    background-color: #810000;
+    background-color: #dd7a7a;
     font-size: 1.5rem;
 }
 
@@ -27,5 +27,11 @@ textarea:hover {
 }
 
 p {
-    color: #810000;
+    color: #dd7a7a;
+}
+
+
+button:hover {
+    transform: scale(1.02);
+    transition: 0.8s;
 }

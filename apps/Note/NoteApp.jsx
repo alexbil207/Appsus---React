@@ -3,6 +3,7 @@ import { noteService } from './services/note.service.js'
 import { storageService } from '../../services/storage-service.js'
 import { NoteList } from '../Note/cmps/NoteList.jsx'
 import { NoteAdd } from '../Note/cmps/NoteAdd.jsx'
+import { NoteFilter } from '../Note/cmps/NoteFilter.jsx'
 
 const KEY = 'notes';
 
@@ -16,6 +17,7 @@ export class NoteApp extends React.Component {
 
     componentDidMount() {
         this.loadNotes()
+    
     }
 
     loadNotes() {
@@ -32,12 +34,17 @@ export class NoteApp extends React.Component {
         noteService.removeNote(note.id).then(() => this.loadNotes())
     }
 
+    onSetFilter = (filterBy) => {
+        this.setState({ filterBy: { ...this.state.filterBy, ...filterBy } }, this.loadNotes)
+    }
+
     render() {
         const { notes, filterBy } = this.state
         if (!notes) return <div>Loading...</div>
         return (
             <React.Fragment>
                 <div className="container note-add">
+                    <NoteFilter onSetFilter={this.onSetFilter} />
                     <NoteAdd addNote={this.addNote} />
                 </div>
 

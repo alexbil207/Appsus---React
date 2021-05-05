@@ -15,23 +15,23 @@ const KEY = 'notes';
 
 var gNotes = [
     {
-        id: 1,
+        id: utilService.makeId(),
         type: "NoteText",
-        isPinned: true,
+        isPinned: false,
         txt: "Fullstack Me Baby!",
         createdAt: Date.now()
     },
     {
-        id: 4,
+        id: utilService.makeId(),
         type: "NoteText",
         isPinned: true,
         txt: "I like to move it",
         createdAt: Date.now()
     },
     {
-        id: 5,
+        id: utilService.makeId(),
         type: "NoteText",
-        isPinned: true,
+        isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
@@ -62,29 +62,28 @@ var gNotes = [
 ];
 
 
-
 function query() {
+    const notes = storageService.loadFromStorage(KEY)
+    if (notes) {
+        return Promise.resolve(notes)
+    }
+    _saveNotesToStorage();
     return Promise.resolve(gNotes)
 }
 
-
-
 function removeNote(noteId) {
-    var noteIdx = gNotes.findIndex(function (note) {
-        return noteId === note.id
-    })
-    gNotes.splice(noteIdx, 1)
-    _saveNotesToStorage();
-
+    var noteIdx = gNotes.findIndex(note => noteId === note.id);
+    const notes = storageService.loadFromStorage(KEY);
+    notes.splice(noteIdx, 1)
+    storageService.saveToStorage(KEY, notes);
     return Promise.resolve()
 }
 
 function addNote(txt) {
-    var note = _createNoteTxt(txt)
-    console.log(note);
-    gNotes.push(note)
-    console.log(gNotes);
-    _saveNotesToStorage();
+    if (!txt) return;
+    const notes = storageService.loadFromStorage(KEY);
+    notes.push(_createNoteTxt(txt))
+    storageService.saveToStorage(KEY, notes);
     return Promise.resolve()
 }
 
@@ -147,16 +146,17 @@ function _createNoteTodo() {
     }
 }
 
-
-
-
 function getNoteById(noteId) {
     const notes = storageService.loadFromStorage(KEY);
     return Promise.resolve(notes.find(note => note.id === noteId)
     );
 }
 
-
 function _saveNotesToStorage() {
     storageService.saveToStorage(KEY, gNotes);
+}
+
+function _loadFromStorage(KEY) {
+    console.log('loading');
+    storageService.loadFromStorage(KEY)
 }

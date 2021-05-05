@@ -1,40 +1,47 @@
 /*### Base ###*/
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body .home-img {
-    background-image: url('../img/background-2.jpg');
-    background-size: cover;
-    background-position: bottom;
-    height: calc(100vh - 85px)
+  background-image: url("../img/background-2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  height: calc(100vh - 85px);
 }
 
 a {
-    outline: none;
-    text-decoration: none;
-    color: inherit;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .btn {
-    background-color: #810000;
-    color: white;
-    padding: 10px 20px;
-    box-shadow: 0 0 3px 1px #a59c9c;
-    transition-duration: 0.5s;
-    border-radius: 10px;
-    font-size: 1.7rem;
-    letter-spacing: 0.3rem;
+  background-color: #810000;
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 0 3px 1px #a59c9c;
+  transition-duration: 0.5s;
+  border-radius: 10px;
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
 }
 
 .btn:active {
-    position: relative;
-    top: 3px;
+  position: relative;
+  top: 3px;
+}
+i {
+  pointer-events: none;
+}
+
+textarea {
+  resize: none;
 }

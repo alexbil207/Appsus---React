@@ -16,56 +16,56 @@ const KEY = 'notes';
 var gNotes = [
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: true,
         txt: "I like to move it",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()

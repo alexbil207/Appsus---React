@@ -26,7 +26,7 @@ function query(filterBy) {
             _saveBooksToStorage()
             return Promise.resolve(getfilterBy(filterBy))
         });
-    } else if (mails.length) {
+    } else if (mails) {
         return Promise.resolve(mails);
     }
     _saveBooksToStorage()

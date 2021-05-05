@@ -1,8 +1,7 @@
-const { Link } = ReactRouterDOM
 import { noteService } from './services/note.service.js'
 import { NoteController } from './cmps/NoteController.jsx'
+import { NoteFilter } from './cmps/NoteFilter.jsx'
 
-const KEY = 'notes';
 
 export class NoteApp extends React.Component {
     state = {
@@ -32,8 +31,10 @@ export class NoteApp extends React.Component {
     render() {
         const { notes } = this.state;
         if (!notes) return <div>Loading...</div>
-        return (
+        return (<section className="controller-section">
             <NoteController />
+            <NoteFilter />
+        </section>
         )
     }
 }

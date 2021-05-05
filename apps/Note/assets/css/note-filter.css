@@ -1,0 +1,17 @@
+/*### Note Filter ###*/
+
+.search-type {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.search-type label, .search-type input, .search-type select {
+    font-size: 1.2rem;
+}
+
+.search-type input, .search-type select {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+}

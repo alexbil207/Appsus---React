@@ -1,9 +1,7 @@
 
-import { noteService } from '../services/note.service.js'
 
 export class NoteAdd extends React.Component {
     state = {
-        note: null,
         txt: '',
     }
 
@@ -16,12 +14,14 @@ export class NoteAdd extends React.Component {
 
     render() {
         const { txt } = this.state;
+        const { addNote } = this.props;
         return (
             <div className="note-add">
                 <label>
                     <input name="txt" type="text" placeholder="Enter your text"
                         onChange={this.handleChange} />
-                    <button onClick={() => noteService.addNote(txt)}>Add</button>
+                    <button className="btn" onClick={() => addNote(txt)}>Add</button>
+
                 </label>
             </div>
         )

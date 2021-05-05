@@ -15,38 +15,79 @@ const KEY = 'notes';
 
 var gNotes = [
     {
-        id: 1,
-        type: "NoteText",
-        isPinned: true,
-        txt: "Fullstack Me Baby!",
+        id: utilService.makeId(),
+        type: "NoteImg",
+        url: "https://media3.s-nbcnews.com/j/newscms/2019_41/3047866/191010-japan-stalker-mc-1121_06b4c20bbf96a51dc8663f334404a899.fit-760w.JPG",
+        style: {
+            backgroundColor: "#00d"
+        },
         createdAt: Date.now()
     },
     {
-        id: 4,
+        id: utilService.makeId(),
         type: "NoteText",
         isPinned: true,
         txt: "I like to move it",
         createdAt: Date.now()
     },
     {
-        id: 5,
+        id: utilService.makeId(),
         type: "NoteText",
-        isPinned: true,
+        isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
     },
-    // {
-    //     id: 2,
-    //     type: "NoteImg",
-    //     info: {
-    //         url: "http://some-img/me",
-    //         title: "Me playing Mi"
-    //     },
-    //     style: {
-    //         backgroundColor: "#00d"
-    //     },
-    //     createdAt: Date.now()
-    // },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteText",
+        isPinned: false,
+        txt: "Another note bites the dust",
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "NoteImg",
+        url: "https://media3.s-nbcnews.com/j/newscms/2019_41/3047866/191010-japan-stalker-mc-1121_06b4c20bbf96a51dc8663f334404a899.fit-760w.JPG",
+        style: {
+            backgroundColor: "#00d"
+        },
+        createdAt: Date.now()
+    },
     // {
     //     id: 3,
     //     type: "NoteTodos",
@@ -61,43 +102,51 @@ var gNotes = [
     // }
 ];
 
-
-
 function query() {
+    const notes = storageService.loadFromStorage(KEY)
+    if (notes) {
+        return Promise.resolve(notes)
+    }
+    _saveNotesToStorage();
     return Promise.resolve(gNotes)
 }
 
-
-
 function removeNote(noteId) {
-    var noteIdx = gNotes.findIndex(function (note) {
-        return noteId === note.id
-    })
-    gNotes.splice(noteIdx, 1)
-    _saveNotesToStorage();
-
+    var noteIdx = gNotes.findIndex(note => noteId === note.id);
+    const notes = storageService.loadFromStorage(KEY);
+    notes.splice(noteIdx, 1)
+    storageService.saveToStorage(KEY, notes);
     return Promise.resolve()
 }
 
 function addNote(txt) {
-    var note = _createNoteTxt(txt)
-    console.log(note);
-    gNotes.push(note)
-    console.log(gNotes);
-    _saveNotesToStorage();
+    if (!txt) return;
+    const notes = storageService.loadFromStorage(KEY);
+    notes.unshift(_createNoteTxt(txt))
+    storageService.saveToStorage(KEY, notes);
     return Promise.resolve()
 }
 
-function _createNotes() {
-    var notes = storageService.loadFromStorage(KEY)
-    if (!notes || notes.length) {
-        notes = []
-        for (let i = 0; i < 9; i++) {
-            notes.push(_createNoteTxt)
-        }
+function addNoteImg(url) {
+    if (!url) return;
+    const notes = storageService.loadFromStorage(KEY);
+    notes.unshift(_createNoteImg(url))
+    storageService.saveToStorage(KEY, notes);
+    return Promise.resolve()
+}
+
+
+
+function _createNoteImg(url) {
+    return {
+        id: utilService.makeId(),
+        type: "NoteImg",
+        url: url,
+        style: {
+            backgroundColor: "#00d"
+        },
+        createdAt: Date.now()
     }
-    gNotes = notes;
-    _saveNotesToStorage();
 }
 
 function _createNoteTxt(txt) {
@@ -113,20 +162,6 @@ function _createNoteTxt(txt) {
     }
 }
 
-function _createNoteImg() {
-    return {
-        id: utilService.makeId(),
-        type: "NoteImg",
-        info: {
-            url: "http://some-img/me",
-            title: "Me playing Mi"
-        },
-        style: {
-            backgroundColor: "#00d"
-        },
-        createdAt: Date.now()
-    }
-}
 
 function _createNoteVid() {
 
@@ -147,16 +182,17 @@ function _createNoteTodo() {
     }
 }
 
-
-
-
 function getNoteById(noteId) {
     const notes = storageService.loadFromStorage(KEY);
     return Promise.resolve(notes.find(note => note.id === noteId)
     );
 }
 
-
 function _saveNotesToStorage() {
     storageService.saveToStorage(KEY, gNotes);
+}
+
+function _loadFromStorage(KEY) {
+    console.log('loading');
+    storageService.loadFromStorage(KEY)
 }

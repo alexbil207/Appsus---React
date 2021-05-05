@@ -16,15 +16,6 @@ const KEY = 'notes';
 var gNotes = [
     {
         id: utilService.makeId(),
-        type: "NoteImg",
-        url: "https://media3.s-nbcnews.com/j/newscms/2019_41/3047866/191010-japan-stalker-mc-1121_06b4c20bbf96a51dc8663f334404a899.fit-760w.JPG",
-        style: {
-            backgroundColor: "#00d"
-        },
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
         type: "NoteText",
         isPinned: true,
         txt: "I like to move it",
@@ -78,28 +69,7 @@ var gNotes = [
         isPinned: false,
         txt: "Another note bites the dust",
         createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "NoteImg",
-        url: "https://media3.s-nbcnews.com/j/newscms/2019_41/3047866/191010-japan-stalker-mc-1121_06b4c20bbf96a51dc8663f334404a899.fit-760w.JPG",
-        style: {
-            backgroundColor: "#00d"
-        },
-        createdAt: Date.now()
-    },
-    // {
-    //     id: 3,
-    //     type: "NoteTodos",
-    //     info: {
-    //         label: "How was it:",
-    //         todos: [
-    //             { txt: "Do that", doneAt: null },
-    //             { txt: "Do this", doneAt: 187111111 }
-    //         ]
-    //     },
-    //     createdAt: Date.now()
-    // }
+    }
 ];
 
 function query() {

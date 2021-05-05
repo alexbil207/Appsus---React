@@ -1,7 +1,8 @@
 .note-add {
     font-size: 1.5rem;
     margin-bottom: 2rem;
-    height: 7rem;
+    height: 10rem;
+    text-align: center;
 }
 
 .note-add input {
@@ -14,24 +15,40 @@
     justify-self: end;
 }
 
+.note-preview{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
 textarea {
     resize: none;
     color: white;
-    background-color: #dd7a7a;
+    /* background-color: #dd7a7a; */
+    /* background-color: #810000; */
+    background-color: #117f5ea1;
     font-size: 1.5rem;
+    box-shadow: 1px 3px 7px 1px rgb(59 34 49 / 61%);
+    border-radius: 2px;
 }
 
 textarea:hover {
-    transform: scale(1.02);
-    transition: 0.8s;
+    transform: scale(1.06);
+    transition: 0.6s;
 }
 
 p {
     color: #dd7a7a;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+button{
+    /* width: 25%;
+    background-color: #117f5ea1; */
 }
 
 
 button:hover {
-    transform: scale(1.02);
+    transform: scale(1.1);
     transition: 0.8s;
 }

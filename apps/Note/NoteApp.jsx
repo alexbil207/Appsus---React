@@ -29,6 +29,9 @@ export class NoteApp extends React.Component {
     addNote = (txt) => {
         noteService.addNote(txt).then(() => this.loadNotes())
     }
+    addImgNote = (url) => {
+        noteService.addNoteImg(url).then(() => this.loadNotes())
+    }
 
     removeNote = (note) => {
         noteService.removeNote(note.id).then(() => this.loadNotes())
@@ -46,6 +49,7 @@ export class NoteApp extends React.Component {
                 <div className="container note-add">
                     <NoteFilter onSetFilter={this.onSetFilter} />
                     <NoteAdd addNote={this.addNote} />
+                    {/* <NoteImgAdd addImgNote={this.addImgNote} /> */}
                 </div>
 
                 <div className="container note-container">

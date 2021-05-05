@@ -13,11 +13,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -29,11 +31,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -45,11 +49,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -61,11 +67,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -77,11 +85,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -93,11 +103,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -109,11 +121,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -125,11 +139,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -141,11 +157,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -157,11 +175,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -173,11 +193,13 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
     {
         id: utilService.makeId(),
@@ -193,11 +215,13 @@ Eaque veritatis, assumenda amet maxime iure quos illum ad voluptates necessitati
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        reply: {
+        replies: [{
+            id: utilService.makeId(),
             from: 'moshe123@gmail.com',
             body: 'Pick up!',
             sentAt: Date.now(),
-        }
+        },
+        ]
     },
 
 ];

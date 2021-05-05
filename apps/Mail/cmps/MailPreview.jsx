@@ -42,7 +42,7 @@ export class MailPreview extends React.Component {
                 </Link>
                 <div className="mail-btns">
                     <button onClick={() => removeMail(mail)}>🗑️</button>
-                    <button name="isRead" onClick={this.handleChanges}>✉️</button>
+                    <button name="isRead" onClick={this.handleChanges}>{isRead ? '📩' : '✉️'}</button>
                 </div>
             </div>
         )

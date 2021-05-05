@@ -1,5 +1,5 @@
 import { mailService } from '../services/mail.service.js'
-
+import { ReplyCmp } from '../cmps/ReplyCmp.jsx';
 
 export class MailDetails extends React.Component {
     state = {
@@ -24,12 +24,17 @@ export class MailDetails extends React.Component {
     render() {
         const { mail } = this.state;
         if (!mail) return <h1>Loading..</h1>
-        return <section className="mail-details-container container flex column">
+        const { replies } = mail;
+        return <section key={mail.id} className="mail-details-container container flex column">
             <p className="mail-data"><b>From: </b>{mail.from}</p>
             <p className="mail-data"><b>To: </b>{mail.to}</p>
             <p className="mail-data"><b>CC: </b></p>
+            <p className="mail-data"><b>Date: </b>{new Date(mail.sentAt).toLocaleString()}</p>
             <p className="mail-data"><b>Subject: </b>{mail.subject}</p>
-            <p className="mail-body">{mail.body}</p>
+            <div className="mail-body flex column">
+                {replies && replies.map(reply => <ReplyCmp reply={reply} />)}
+                <p>{mail.body}</p>
+            </div>
             <div className="nav-btns">
                 <button onClick={() => this.props.history.push('/Mail')}>Back</button>
 

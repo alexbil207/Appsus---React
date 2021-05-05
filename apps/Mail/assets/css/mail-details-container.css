@@ -1,5 +1,10 @@
 /*### mail-details-container ###*/
 
+hr {
+    width: 90%;
+    margin: 5px auto;
+}
+
 .mail-body {
     border: 1px solid #000;
     width: 100%;
@@ -7,6 +12,10 @@
     height: calc(100vh - 85px - 150px);
     text-align: center;
     overflow-y: scroll;
+}
+
+.mail-data {
+    padding: 2px 0;
 }
 
 .nav-btns button {

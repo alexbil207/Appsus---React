@@ -14,19 +14,54 @@ export const mailService = {
 
 const KEY = 'mails';
 
-function query() {
+
+function query(filterBy) {
     const mails = storageService.loadFromStorage(KEY)
-    if (mails) {
-        return Promise.resolve(mails)
+    if (filterBy) {
+        if (mails.length) {
+            getfilterBy(filterBy);
+            return Promise.resolve(getfilterBy(filterBy));
+        }
+        return Promise.resolve(() => {
+            _saveBooksToStorage()
+            return Promise.resolve(getfilterBy(filterBy))
+        });
+    } else if (mails.length) {
+        return Promise.resolve(mails);
     }
-    _saveBooksToStorage();
-    return Promise.resolve(mailDataService.gMails)
+    _saveBooksToStorage()
+    return Promise.resolve(storageService.loadFromStorage(KEY));
 }
 
+function getfilterBy(filterBy) {
+    const mails = storageService.loadFromStorage(KEY)
+    let filteredMailes;
+    const { category, text } = filterBy;
+    if (category) {
+        switch (category) {
+            case 'isSend':
+                filteredMailes = mails.filter(mail => mail[category] === true);
+                break;
+            case 'isFavorite':
+                filteredMailes = mails.filter(mail => mail[category] === true);
+                break;
+            case 'isRead':
+                filteredMailes = mails.filter(mail => mail[category] === false);
+                break;
+            case 'all':
+                filteredMailes = mails
+                break;
+        }
+        if (text) return filteredMailes.filter(mail => mail.subject.includes(text));
+        else return filteredMailes;
+    }
+}
 
-function createMails() {
-    mailDataService.gMails.push(_createMail());
-    _saveBooksToStorage();
+function createMails(mailInfo) {
+    const mails = storageService.loadFromStorage(KEY);
+    mails.unshift(_createMail(mailInfo));
+    storageService.saveToStorage(KEY, mails)
+    return Promise.resolve();
 }
 
 function getMailById(mailId, isIdx = false) {
@@ -52,16 +87,17 @@ function mailUpdate(changeInfo) {
     })
 }
 
-function _createMail() {
+function _createMail(mailInfo) {
+    const { from, to, subject, body, isSend, isRead } = mailInfo;
     return {
         id: utilService.makeId(),
-        subject: '',
-        from: '',
-        to: '',
-        body: '',
-        isRead: false,
+        subject,
+        from,
+        to,
+        body,
+        isRead,
         isFavorite: false,
-        isReceived: false,
+        isSend,
         sentAt: Date.now(),
         reply: {
             from: '',

@@ -3,6 +3,34 @@
 .controller-container {
     padding: 10px 10px;
     box-shadow: inset 0px -4px 23px 5px rgba(177, 173, 173, 0.8);
-    border: 1px solid rgb(170, 168, 168);
-    ;
+}
+
+.new-mail-container {
+    width: 300px;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background-color: #fff;
+}
+
+.controller-container, .new-mail-container {
+    border: 2px solid rgb(170, 168, 168);
+}
+
+.new-mail-container {
+    box-shadow: 0px 0px 9px 0px rgb(0, 0, 0);
+}
+
+.new-mail-container input {
+    width: 100%;
+}
+
+.new-mail-container textarea {
+    resize: none;
+    height: 100%;
+}
+
+.btns>* {
+    flex: 1;
 }

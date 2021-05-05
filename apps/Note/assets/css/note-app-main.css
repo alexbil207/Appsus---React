@@ -20,11 +20,9 @@
     text-align: center;
 }
 
-textarea {
+/* textarea {
     resize: none;
     color: white;
-    /* background-color: #dd7a7a; */
-    /* background-color: #810000; */
     background-color: #117f5ea1;
     font-size: 1.5rem;
     box-shadow: 1px 3px 7px 1px rgb(59 34 49 / 61%);
@@ -43,12 +41,12 @@ p {
 }
 
 button{
-    /* width: 25%;
-    background-color: #117f5ea1; */
+    width: 25%;
+    background-color: #117f5ea1;
 }
 
 
 button:hover {
     transform: scale(1.1);
     transition: 0.8s;
-}
+} */

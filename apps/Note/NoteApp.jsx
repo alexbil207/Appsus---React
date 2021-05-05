@@ -1,6 +1,7 @@
 import { noteService } from './services/note.service.js'
 import { NoteController } from './cmps/NoteController.jsx'
 import { NoteFilter } from './cmps/NoteFilter.jsx'
+import { NoteList } from './cmps/NoteList.jsx'
 
 
 export class NoteApp extends React.Component {
@@ -31,10 +32,14 @@ export class NoteApp extends React.Component {
     render() {
         const { notes } = this.state;
         if (!notes) return <div>Loading...</div>
-        return (<section className="controller-section">
-            <NoteController />
-            <NoteFilter />
-        </section>
+        return (
+            <React.Fragment>
+                <section className="controller-section">
+                    <NoteController />
+                    <NoteFilter />
+                </section>
+                <NoteList notes={notes} />
+            </React.Fragment>
         )
     }
 }

@@ -1,0 +1,27 @@
+.note-list {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.preview-btns {
+  width: 100%;
+}
+
+.preview-btns button {
+  padding: 5px;
+}
+.note-preview {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px auto;
+  width: auto;
+
+  border: 1px solid black;
+}
+.note-preview img {
+  width: 300px;
+}
+.note-preview iframe {
+  width: 300px;
+}

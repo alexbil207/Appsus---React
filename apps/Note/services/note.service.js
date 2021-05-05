@@ -30,46 +30,84 @@ var gNotes = [
     },
     {
         id: utilService.makeId(),
-        type: "text",
+        type: "photo",
         isPinned: false,
-        txt: "Another note bites the dust",
+        txt: '',
+        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "text",
+        type: "photo",
         isPinned: false,
-        txt: "Another note bites the dust",
+        txt: '',
+        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "text",
+        type: "photo",
         isPinned: false,
-        txt: "Another note bites the dust",
+        txt: '',
+        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "text",
+        type: "photo",
         isPinned: false,
-        txt: "Another note bites the dust",
+        txt: '',
+        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "text",
+        type: "photo",
         isPinned: false,
-        txt: "Another note bites the dust",
+        txt: '',
+        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
         createdAt: Date.now()
     },
     {
         id: utilService.makeId(),
-        type: "text",
+        type: "video",
         isPinned: false,
-        txt: "Another note bites the dust",
+        txt: '',
+        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
         createdAt: Date.now()
-    }
+    },
+    {
+        id: utilService.makeId(),
+        type: "video",
+        isPinned: false,
+        txt: '',
+        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "video",
+        isPinned: false,
+        txt: '',
+        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "video",
+        isPinned: false,
+        txt: '',
+        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "video",
+        isPinned: false,
+        txt: '',
+        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+        createdAt: Date.now()
+    },
 ];
 
 function query() {
@@ -110,11 +148,10 @@ function addNoteImg(url) {
 function _createNoteImg(url) {
     return {
         id: utilService.makeId(),
-        type: "NoteImg",
+        type: "photo",
         url: url,
-        style: {
-            backgroundColor: "#00d"
-        },
+        isPinned: false,
+        txt,
         createdAt: Date.now()
     }
 }
@@ -122,7 +159,7 @@ function _createNoteImg(url) {
 function _createNoteTxt(txt) {
     return {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: txt,
         style: {
@@ -140,7 +177,7 @@ function _createNoteVid() {
 function _createNoteTodo() {
     return {
         id: utilService.makeId(),
-        type: "NoteTodos",
+        type: "todo",
         info: {
             label: "How was it:",
             todos: [

@@ -1,0 +1,10 @@
+/*### mail-details-container ###*/
+
+.mail-body {
+    border: 1px solid #000;
+    width: 100%;
+    padding: 10px;
+    height: calc(100vh - 85px - 150px);
+    text-align: center;
+    overflow-y: scroll;
+}

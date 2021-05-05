@@ -1,5 +1,5 @@
 
-export class MailFilter extends React.Component {
+export class MailController extends React.Component {
     state = {
         filterBy: {
             text: null,

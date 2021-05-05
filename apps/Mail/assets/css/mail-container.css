@@ -1,5 +1,5 @@
 .mail-container {
-    border: 1px solid #000;
+    border: 2px solid rgb(170, 168, 168);
     height: calc(100vh - 85px - 75px);
     overflow-y: scroll;
 }
@@ -19,14 +19,16 @@
 
 .mail-card {
     border-bottom: 1px solid rgb(177, 173, 173);
-    margin: 10px;
+    margin-bottom: 5px;
 }
 
 .mail-card a {
     width: 80%;
+    flex-wrap: wrap;
 }
 
 .mail-card button {
+    background-color: transparent;
     border: none;
     font-size: 1.7rem;
     cursor: pointer;
@@ -41,4 +43,8 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
+}
+
+.unread {
+    background-color: rgb(214, 209, 209);
 }

@@ -43,8 +43,8 @@ function removeMail(mailId) {
     return Promise.resolve();
 }
 
-function mailUpdate(changes) {
-    const { mailId, field } = changes;
+function mailUpdate(changeInfo) {
+    const { mailId, field } = changeInfo;
     const mails = storageService.loadFromStorage(KEY);
     getMailById(mailId, true).then(idx => {
         mails[idx][field] = !mails[idx][field];
@@ -79,3 +79,7 @@ function _saveBooksToStorage() {
 
 // Show Time in readble format
 //new Date().toLocaleString()
+
+
+
+

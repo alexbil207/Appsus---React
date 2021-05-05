@@ -21,9 +21,13 @@ export class NoteApp extends React.Component {
             })
     }
 
+    addNote = (note) => {
+        noteService.addNote(note.id).then(() => this.loadNotes())
+    }
+    
+
     removeNote = (note) => {
         noteService.removeNote(note.id).then(() => this.loadNotes())
-        console.log('removing');
     }
     
     render() {
@@ -32,10 +36,9 @@ export class NoteApp extends React.Component {
         return (
             <React.Fragment>
                 <section className="container">
-                <NoteAdd />
+                <NoteAdd addNote={this.addNote} />
                 </section>
             <section className="container note-app">
-
                 <NoteList notes={notes} removeNote={this.removeNote} />
             </section>
             </React.Fragment>

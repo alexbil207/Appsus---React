@@ -7,6 +7,7 @@ export const noteService = {
     query,
     removeNote,
     getNoteById,
+    addNote,
 
 }
 
@@ -67,14 +68,23 @@ function query() {
 }
 
 
+
 function removeNote(noteId) {
-    console.log('service removing');
     var noteIdx = gNotes.findIndex(function (note) {
         return noteId === note.id
     })
     gNotes.splice(noteIdx, 1)
     _saveNotesToStorage();
 
+    return Promise.resolve()
+}
+
+function addNote(txt) {
+    var note = _createNoteTxt(txt)
+    console.log(note);
+    gNotes.push(note)
+    console.log(gNotes);
+    _saveNotesToStorage();
     return Promise.resolve()
 }
 
@@ -90,15 +100,12 @@ function _createNotes() {
     _saveNotesToStorage();
 }
 
-
-function _createNoteTxt(note) {
+function _createNoteTxt(txt) {
     return {
         id: utilService.makeId(),
         type: "NoteText",
-        isPinned: true,
-        info: {
-            txt: note,
-        },
+        isPinned: false,
+        txt: txt,
         style: {
             backgroundColor: "#00d"
         },

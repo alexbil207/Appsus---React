@@ -110,7 +110,7 @@ function addNoteImg(url) {
 function _createNoteImg(url) {
     return {
         id: utilService.makeId(),
-        type: "NoteImg",
+        type: "photo",
         url: url,
         style: {
             backgroundColor: "#00d"
@@ -122,7 +122,7 @@ function _createNoteImg(url) {
 function _createNoteTxt(txt) {
     return {
         id: utilService.makeId(),
-        type: "NoteText",
+        type: "text",
         isPinned: false,
         txt: txt,
         style: {
@@ -140,7 +140,7 @@ function _createNoteVid() {
 function _createNoteTodo() {
     return {
         id: utilService.makeId(),
-        type: "NoteTodos",
+        type: "todo",
         info: {
             label: "How was it:",
             todos: [

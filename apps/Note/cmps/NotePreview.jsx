@@ -40,11 +40,11 @@ export class NotePreview extends React.Component {
                     <button ><i className="fas fa-thumbtack fa-2x"></i></button>
                 </div>
                 <div className={`colors flex gap ${isColorShown ? '' : 'hidden'}`}>
-                    <button onClick={this.handleChange} className="red" name="red"></button>
-                    <button onClick={this.handleChange} className="blue" name="blue"></button>
-                    <button onClick={this.handleChange} className="orange" name="orange"></button>
+                    <button onClick={this.handleChange} className="pink" name="pink"></button>
+                    <button onClick={this.handleChange} className="greenish" name="greenish"></button>
                     <button onClick={this.handleChange} className="yellow" name="yellow"></button>
-                    <button onClick={this.handleChange} className="purple" name="purple"></button>
+                    <button onClick={this.handleChange} className="cyan" name="cyan"></button>
+                    <button onClick={this.handleChange} className="green-pastel" name="green-pastel"></button>
                 </div>
             </article>
         )

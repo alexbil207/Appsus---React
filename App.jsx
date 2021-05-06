@@ -18,7 +18,6 @@ export function App() {
             </header>
             <main className="app">
                 <Switch>
-                    {/* <Route component={NoteDetails} path='/Note/:noteId' /> */}
                     <Route component={NoteApp} path='/Note' />
                     <Route component={MailDetails} path='/Mail/:mailId' />
                     <Route component={MailApp} path='/Mail' />

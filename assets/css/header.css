@@ -15,8 +15,12 @@
 
 .logo {
   color: #810000;
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Gloria Hallelujah', cursive;
   font-size: 1.3rem;
+}
+
+.logo h1 {
+  text-shadow: 2px 1px 0 #ce8c8c;
 }
 
 .menu-container {

@@ -6,6 +6,7 @@
 
 .preview-btns {
   width: 100%;
+  opacity: 0;
 }
 
 .preview-btns button {
@@ -15,14 +16,17 @@
   display: inline-block;
   margin: 10px auto;
   width: auto;
-
-  border: 1px solid black;
 }
 .note-preview img {
   width: 300px;
 }
 .note-preview iframe {
   width: 300px;
+}
+
+.note-preview:hover .preview-btns {
+  transition: 1s;
+  opacity: 1;
 }
 
 @media (min-width: 320px) {

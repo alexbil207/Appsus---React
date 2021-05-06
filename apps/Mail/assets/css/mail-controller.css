@@ -2,7 +2,7 @@
 
 .controller-container {
     padding: 10px 10px;
-    box-shadow: inset 0px -4px 23px 5px rgba(177, 173, 173, 0.8);
+    box-shadow: inset -1px 20px 23px 10px rgb(84, 85, 104);
 }
 
 .new-mail-container {
@@ -12,10 +12,6 @@
     top: 20%;
     left: 10%;
     background-color: #fff;
-}
-
-.controller-container, .new-mail-container {
-    border: 2px solid rgb(170, 168, 168);
 }
 
 .new-mail-container {

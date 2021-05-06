@@ -1,9 +1,3 @@
-.note-list {
-  column-count: 4;
-  column-gap: 20px;
-  padding: 20px;
-}
-
 .preview-btns {
   width: 100%;
   opacity: 0;
@@ -12,14 +6,19 @@
 .preview-btns button {
   padding: 5px;
 }
+
 .note-preview {
+  box-shadow: -1px -1px 5px 2px #000;
   display: inline-block;
-  margin: 10px auto;
+  padding: 5px;
+  margin: 10px;
   width: auto;
 }
+
 .note-preview img {
   width: 300px;
 }
+
 .note-preview iframe {
   width: 300px;
 }
@@ -27,6 +26,10 @@
 .note-preview:hover .preview-btns {
   transition: 1s;
   opacity: 1;
+}
+
+article h2 {
+  text-align: center;
 }
 
 @media (min-width: 320px) {

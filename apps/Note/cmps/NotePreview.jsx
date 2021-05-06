@@ -19,9 +19,7 @@ export class NotePreview extends React.Component {
     render() {
         const { note, type } = this.state;
         const { removeNote } = this.props;
-        //console.log('type', type);
         if (!note) return <h1>Loading...</h1>
-        //console.log(note);
 
         return (
             <article id={note.id} className='note-preview'>

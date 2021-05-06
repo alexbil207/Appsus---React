@@ -18,96 +18,9 @@ var gNotes = [
         id: utilService.makeId(),
         type: "text",
         isPinned: true,
-        txt: "I like to move it",
+        text: "I like to move it",
         createdAt: Date.now()
-    },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "text",
-    //     isPinned: false,
-    //     txt: "Another note bites the dust",
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "photo",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "photo",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "photo",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "photo",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "photo",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "video",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "video",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "video",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "video",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-    //     createdAt: Date.now()
-    // },
-    // {
-    //     id: utilService.makeId(),
-    //     type: "video",
-    //     isPinned: false,
-    //     txt: '',
-    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-    //     createdAt: Date.now()
-    // },
+    }
 ];
 
 function query() {
@@ -127,67 +40,75 @@ function removeNote(noteId) {
     return Promise.resolve()
 }
 
-function addNote(txt) {
-    if (!txt) return;
-    const notes = storageService.loadFromStorage(KEY);
-    notes.unshift(_createNoteTxt(txt))
+function addNote(noteInfo) {
+    const notes = storageService.loadFromStorage(KEY)
+    const { type } = noteInfo;
+    switch (type) {
+        case 'text':
+            notes.unshift(_createNoteTxt(noteInfo));
+            break;
+        case 'photo':
+            notes.unshift(_createNoteImg(noteInfo));
+            break;
+        case 'video':
+            notes.unshift(_createNoteVideo(noteInfo));
+            break;
+        case 'todo':
+            notes.unshift(createNoteTodos(noteInfo));
+            break;
+
+    }
     storageService.saveToStorage(KEY, notes);
-    return Promise.resolve()
+    return Promise.resolve();
 }
 
-function addNoteImg(url) {
-    if (!url) return;
-    const notes = storageService.loadFromStorage(KEY);
-    notes.unshift(_createNoteImg(url))
-    storageService.saveToStorage(KEY, notes);
-    return Promise.resolve()
-}
 
 
 
-function _createNoteImg(url) {
+function _createNoteImg(noteInfo) {
+    const { input } = noteInfo
     return {
         id: utilService.makeId(),
         type: "photo",
-        url: url,
+        url: input,
         isPinned: false,
-        txt,
         createdAt: Date.now()
     }
 }
 
-function _createNoteTxt(txt) {
+function _createNoteTxt(noteInfo) {
+    const { input } = noteInfo
     return {
         id: utilService.makeId(),
         type: "text",
         isPinned: false,
-        txt: txt,
-        style: {
-            backgroundColor: "#00d"
-        },
+        text: input,
         createdAt: Date.now()
     }
 }
 
 
-function _createNoteVid() {
-
-}
-
-function _createNoteTodo() {
+function _createNoteVideo(noteInfo) {
+    let { input } = noteInfo
+    if (input.includes('watch?v=')) {
+        input = input.replace('watch?v=', 'embed/');
+    }
+    if (input.includes('&')) {
+        let idx = input.indexOf('&');
+        input = input.slice(0, idx);
+    }
     return {
         id: utilService.makeId(),
-        type: "todo",
-        info: {
-            label: "How was it:",
-            todos: [
-                { txt: "Do that", doneAt: null },
-                { txt: "Do this", doneAt: 187111111 }
-            ]
-        },
+        type: "video",
+        isPinned: false,
+        url: input,
         createdAt: Date.now()
     }
 }
+
+
+
+
 
 function getNoteById(noteId) {
     const notes = storageService.loadFromStorage(KEY);
@@ -199,7 +120,3 @@ function _saveNotesToStorage() {
     storageService.saveToStorage(KEY, gNotes);
 }
 
-function _loadFromStorage(KEY) {
-    console.log('loading');
-    storageService.loadFromStorage(KEY)
-}

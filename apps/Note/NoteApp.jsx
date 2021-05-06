@@ -18,15 +18,14 @@ export class NoteApp extends React.Component {
             this.setState(() => ({ notes }))
         })
     }
-    addNote = (txt) => {
-        noteService.addNote(txt).then(() => this.loadNotes())
+    addNote = (noteInfo) => {
+        noteService.addNote(noteInfo).then(() => this.loadNotes())
     }
-    addImgNote = (url) => {
-        noteService.addNoteImg(url).then(() => this.loadNotes())
-    }
+
     removeNote = (note) => {
         noteService.removeNote(note.id).then(() => this.loadNotes())
     }
+
 
 
     render() {
@@ -35,7 +34,7 @@ export class NoteApp extends React.Component {
         return (
             <React.Fragment>
                 <section className="controller-section">
-                    <NoteController />
+                    <NoteController addNote={this.addNote} />
                     <NoteFilter />
                 </section>
                 <NoteList notes={notes} removeNote={this.removeNote} />

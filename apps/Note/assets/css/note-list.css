@@ -42,20 +42,20 @@ article h2 {
   bottom: -50px;
 }
 
-.red {
-  background-color: red;
+.pink {
+  background-color: #f38181;
 }
-.blue {
-  background-color: blue;
-}
-.orange {
-  background-color: orange;
+.greenish {
+  background-color: #eaffd0;
 }
 .yellow {
-  background-color: yellow;
+  background-color: #fce38a;
 }
-.purple {
-  background-color: purple;
+.cyan {
+  background-color: #95e1d3;
+}
+.green-pastel {
+  background-color: #c6ffc1;
 }
 
 @media (min-width: 320px) {

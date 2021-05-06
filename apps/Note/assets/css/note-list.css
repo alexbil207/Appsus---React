@@ -11,15 +11,14 @@
   box-shadow: -1px -1px 5px 2px #000;
   display: inline-block;
   padding: 5px;
-  margin: 10px;
+  margin: 30px 10px;
   width: auto;
+  position: relative;
 }
 
-.note-preview img {
-  width: 300px;
-}
-
-.note-preview iframe {
+.note-preview img,
+.note-preview iframe,
+article h2 {
   width: 300px;
 }
 
@@ -30,6 +29,33 @@
 
 article h2 {
   text-align: center;
+}
+.note-preview .colors > * {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.note-preview .colors {
+  transition: 1s;
+
+  position: absolute;
+  bottom: -50px;
+}
+
+.red {
+  background-color: red;
+}
+.blue {
+  background-color: blue;
+}
+.orange {
+  background-color: orange;
+}
+.yellow {
+  background-color: yellow;
+}
+.purple {
+  background-color: purple;
 }
 
 @media (min-width: 320px) {

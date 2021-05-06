@@ -18,9 +18,32 @@ var gNotes = [
         id: utilService.makeId(),
         type: "text",
         isPinned: true,
-        text: "I like to move it",
+        text: "Welcome to the notes app",
         createdAt: Date.now()
-    }
+    },
+    {
+        id: utilService.makeId(),
+        type: "video",
+        isPinned: false,
+        url: 'https://www.youtube.com/embed/KRqIkTlGIOE',
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "video",
+        isPinned: false,
+        url: 'https://www.youtube.com/embed/ngL8GXN6AvE',
+        createdAt: Date.now()
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
+        url: 'https://www.rd.com/wp-content/uploads/2018/02/25_Hilarious-Photos-that-Will-Get-You-Through-the-Week_280228817_Doty911.jpg',
+        isPinned: false,
+        createdAt: Date.now()
+    },
+
+
 ];
 
 function query() {

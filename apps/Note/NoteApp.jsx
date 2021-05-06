@@ -2,6 +2,7 @@ import { noteService } from './services/note.service.js'
 import { NoteController } from './cmps/NoteController.jsx'
 import { NoteFilter } from './cmps/NoteFilter.jsx'
 import { NoteList } from './cmps/NoteList.jsx'
+// import { eventBusService } from './cmps/NoteList.jsx'
 
 
 export class NoteApp extends React.Component {
@@ -26,6 +27,9 @@ export class NoteApp extends React.Component {
         noteService.removeNote(note.id).then(() => this.loadNotes())
     }
 
+    noteUpdate(updateInfo) {
+        noteService.noteUpdate(updateInfo).then(() => this.loadNotes())
+    }
 
 
     render() {
@@ -37,7 +41,7 @@ export class NoteApp extends React.Component {
                     <NoteController addNote={this.addNote} />
                     <NoteFilter />
                 </section>
-                <NoteList notes={notes} removeNote={this.removeNote} />
+                <NoteList notes={notes} removeNote={this.removeNote} noteUpdate={this.noteUpdate} />
             </React.Fragment>
         )
     }

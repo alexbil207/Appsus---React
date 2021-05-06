@@ -38,7 +38,7 @@ export class NoteApp extends React.Component {
                     <NoteController />
                     <NoteFilter />
                 </section>
-                <NoteList notes={notes} />
+                <NoteList notes={notes} removeNote={this.removeNote} />
             </React.Fragment>
         )
     }

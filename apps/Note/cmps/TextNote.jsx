@@ -3,8 +3,8 @@
 export function TextNote({ note }) {
     return (
         <React.Fragment>
-            <textarea id={note.id} value={note.txt} >
-                {note.txt}
+            <textarea id={note.id}>
+                {note.text}
             </textarea>
         </React.Fragment>
     )

@@ -21,93 +21,93 @@ var gNotes = [
         txt: "I like to move it",
         createdAt: Date.now()
     },
-    {
-        id: utilService.makeId(),
-        type: "text",
-        isPinned: false,
-        txt: "Another note bites the dust",
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "photo",
-        isPinned: false,
-        txt: '',
-        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "photo",
-        isPinned: false,
-        txt: '',
-        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "photo",
-        isPinned: false,
-        txt: '',
-        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "photo",
-        isPinned: false,
-        txt: '',
-        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "photo",
-        isPinned: false,
-        txt: '',
-        url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "video",
-        isPinned: false,
-        txt: '',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "video",
-        isPinned: false,
-        txt: '',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "video",
-        isPinned: false,
-        txt: '',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "video",
-        isPinned: false,
-        txt: '',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-        createdAt: Date.now()
-    },
-    {
-        id: utilService.makeId(),
-        type: "video",
-        isPinned: false,
-        txt: '',
-        url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
-        createdAt: Date.now()
-    },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "text",
+    //     isPinned: false,
+    //     txt: "Another note bites the dust",
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "photo",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "photo",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "photo",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "photo",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "photo",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://i.ytimg.com/vi/qWsB8U0KSF0/maxresdefault.jpg',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "video",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "video",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "video",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "video",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+    //     createdAt: Date.now()
+    // },
+    // {
+    //     id: utilService.makeId(),
+    //     type: "video",
+    //     isPinned: false,
+    //     txt: '',
+    //     url: 'https://www.youtube.com/embed/tgbNymZ7vqY',
+    //     createdAt: Date.now()
+    // },
 ];
 
 function query() {
@@ -120,8 +120,8 @@ function query() {
 }
 
 function removeNote(noteId) {
-    var noteIdx = gNotes.findIndex(note => noteId === note.id);
     const notes = storageService.loadFromStorage(KEY);
+    var noteIdx = notes.findIndex(note => noteId === note.id);
     notes.splice(noteIdx, 1)
     storageService.saveToStorage(KEY, notes);
     return Promise.resolve()

@@ -1,9 +1,8 @@
 /*### mail controller Cmp ###*/
 
-.controller-container {
+.controller-container, .controller-container option {
   padding: 10px 10px;
-  background-color: #810000;
-  opacity: 0.8;
+  background-color: rgba(129, 0, 0, 0.8);
 }
 
 .controller-container button:hover {
@@ -18,7 +17,6 @@
 }
 
 .controller-container select {
-  color: #fff;
   border: none;
   width: 100px;
   font-size: 1.1rem;
@@ -26,8 +24,8 @@
   outline: none;
 }
 
-.controller-container option {
-  color: #000;
+.controller-container option, .controller-container select {
+  color: #fff;
 }
 
 .new-mail-container {

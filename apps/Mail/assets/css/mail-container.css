@@ -17,7 +17,7 @@
   outline: 1px solid slategrey;
 }
 
-.new-mail-container {
+.new-mail-container, .mail-card a {
   padding: 10px;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .mail-card a {
-  width: 70%;
+  width: 90%;
   flex-wrap: wrap;
 }
 
@@ -70,7 +70,6 @@
 }
 
 .unread {
-  /* background-color: rgb(214, 209, 209); */
   box-shadow: inset -1px 20px 23px 10px rgba(84, 85, 104, 0.3);
 }
 

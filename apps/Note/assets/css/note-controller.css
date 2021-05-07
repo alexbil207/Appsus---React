@@ -4,13 +4,6 @@
   align-items: center;
 }
 
-.controller-section .search-type {
-  width: 30%;
-}
-.controller-section .search-type p {
-  color: #810000;
-}
-
 .add-note-container {
   margin: 30px auto;
   width: 90%;

@@ -43,9 +43,9 @@ export class NoteApp extends React.Component {
         )
         return (
             <React.Fragment>
-                <section className="controller-section">
-                    <NoteController addNote={this.addNote} />
+                <section className="controller-section flex">
                     <NoteFilter onFilterChange={this.onFilterChange} />
+                    <NoteController addNote={this.addNote} />
                 </section>
                 <NoteList notes={notes} removeNote={this.removeNote} noteUpdate={this.noteUpdate} />
             </React.Fragment >

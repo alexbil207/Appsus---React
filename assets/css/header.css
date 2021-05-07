@@ -16,7 +16,7 @@
 .nav-btn img:hover {
   transition: 1s;
   opacity: 0.8;
-  transform: scale(1.1);
+  transform: scale(1.2) rotate(7deg);
 }
 
 .logo {
@@ -32,7 +32,7 @@
 .logo h1:hover {
   transition: 1s;
   opacity: 0.8;
-  transform: scale(1.1);
+  transform: scale(1.1) rotate(-7deg);
 }
 
 .menu-container {
@@ -58,4 +58,6 @@ a img {
 
 a img:hover {
   opacity: 1;
+  transition: 0.5s;
+  transform: scale(1.01) rotate(10deg);
 }

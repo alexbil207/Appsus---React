@@ -12,6 +12,10 @@
   background-color: greenyellow;
 }
 
+.controller-container input[type="text"]::placeholder {
+  color: #810000;
+}
+
 .new-mail-container {
   width: 300px;
   height: 60%;

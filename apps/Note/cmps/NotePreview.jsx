@@ -34,7 +34,7 @@ export class NotePreview extends React.Component {
     render() {
         const { note, type, color, isColorShown, isEditClicked } = this.state;
         const { removeNote, pinNote } = this.props;
-        console.log(pinNote);
+        //console.log(pinNote);
         if (!note) return <h1>Loading...</h1>
         return (
             <article id={note.id} className={`note-preview ${note.color} ${color}`}>

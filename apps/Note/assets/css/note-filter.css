@@ -1,17 +1,36 @@
 /*### Note Filter ###*/
 
 .search-type {
+  width: 50%;
+  padding: 10px 0;
+}
+
+.search-type label,
+.search-type input,
+.search-type select,
+.search-type p {
+  font-size: 1.2rem;
+}
+
+.search-type input,
+.search-type select {
+  background-color: transparent;
+  border: none;
+  color: #810000;
+}
+
+.controller-section .search-type {
+  width: 30%;
+}
+.controller-section .search-type p {
+  color: #810000;
+}
+
+@media (max-width: 850px) {
+  .controller-section {
+    flex-direction: column-reverse;
+  }
+  .search-type {
     width: 100%;
-    padding: 10px 0;
-}
-
-.search-type label, .search-type input, .search-type select {
-    font-size: 1.2rem;
-}
-
-.search-type input, .search-type select {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid #000;
-    outline: none;
+  }
 }

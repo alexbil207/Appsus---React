@@ -3,7 +3,8 @@
   opacity: 0;
 }
 
-.preview-btns button, .note-header {
+.preview-btns button,
+.note-header {
   padding: 5px;
 }
 
@@ -22,7 +23,9 @@
   cursor: pointer;
 }
 
-.note-preview img, .note-preview iframe, article h2 {
+.note-preview img,
+.note-preview iframe,
+article h2 {
   width: 300px;
 }
 
@@ -37,11 +40,12 @@
   opacity: 1;
 }
 
-article h2, .note-preview {
+article h2,
+.note-preview {
   text-align: center;
 }
 
-.note-preview .colors>* {
+.note-preview .colors > * {
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -72,8 +76,6 @@ article h2, .note-preview {
 .green-pastel {
   background-color: #c6ffc1;
 }
-
-/* TODO : ALIGN ICONS ON TOP OF NOTE */
 
 .video-note {
   align-content: center;

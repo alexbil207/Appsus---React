@@ -1,13 +1,20 @@
 /*## note-controller ##*/
 
+.controller-section {
+  align-items: center;
+}
+
+.controller-section .search-type {
+  width: 30%;
+}
+.controller-section .search-type p {
+  color: #810000;
+}
+
 .add-note-container {
   margin: 30px auto;
   width: 90%;
   height: 70px;
-  background-color: #ededef;
-  border-radius: 5px;
-  box-shadow: 2px 1px 5px 0px #757272,
-    inset 0px -4px 23px 5px rgb(177, 173, 173, 80%);
 }
 
 .add-note-container img {

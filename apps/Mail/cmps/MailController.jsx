@@ -2,7 +2,7 @@
 export class MailController extends React.Component {
     state = {
         text: null,
-        category: null,
+        category: 'inbox',
     }
 
     handleChanges = (ev) => {

@@ -32,6 +32,7 @@ export class NoteController extends React.Component {
 
     addNoteClick = () => {
         const { addNote } = this.props;
+        if (!this.state.input.length) return
         addNote(this.state);
         this.setState({ input: '' })
     }

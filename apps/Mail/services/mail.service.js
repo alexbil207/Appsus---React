@@ -21,7 +21,6 @@ function query(filterBy) {
         _saveBooksToStorage()
         return Promise.resolve(getfilterBy(filterBy))
     }
-    getfilterBy(filterBy);
     return Promise.resolve(getfilterBy(filterBy));
 }
 
@@ -44,8 +43,8 @@ function getfilterBy(filterBy) {
                 filteredMailes = mails.filter(mail => mail.isSend === false);
                 break;
         }
-        if (text) return filteredMailes.filter(mail => mail.subject.includes(text));
-        else return filteredMailes;
+        if (text) return Promise.resolve(filteredMailes.filter(mail => mail.subject.toLowerCase().includes(text)))
+        else return Promise.resolve(filteredMailes);
     }
 }
 

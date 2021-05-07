@@ -42,7 +42,7 @@ export class NotePreview extends React.Component {
                     <button onClick={() => this.setState({ isColorShown: !isColorShown })} ><i className="fas fa-palette fa-2x"></i></button>
                     <button onClick={() => this.setState({ isEditClicked: !isEditClicked })}>
                         <i className="fas fa-edit fa-2x"></i></button>
-                    <button onClick={() => pinNote(note)} ><i className="fas fa-thumbtack fa-2x"></i></button>
+                    <button ><i className="fas fa-thumbtack fa-2x"></i></button>
                 </div>
                 <div className={`colors flex gap ${isColorShown ? '' : 'hidden'}`}>
                     <button onClick={this.handleChange} className="pink" name="pink"></button>

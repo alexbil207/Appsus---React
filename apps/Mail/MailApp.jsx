@@ -30,14 +30,18 @@ export class MailApp extends React.Component {
         this.setState({ isNewClicked: !isNewClicked })
     }
     onFilterChange = (filterBy) => {
+        console.log(filterBy)
         this.setState({ filterBy }, () => this.loadMails())
     }
 
+    addReply = (replyInfo) => {
+        console.log(replyInfo)
+    }
     render() {
         const { mails, isNewClicked } = this.state;
         if (!mails) return (
             <React.Fragment>
-                <MailController />
+                <MailController onFilterChange={this.onFilterChange} />
                 <LoadingCmps />
             </React.Fragment>
         )

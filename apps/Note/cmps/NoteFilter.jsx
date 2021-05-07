@@ -7,6 +7,7 @@ export class NoteFilter extends React.Component {
         const { onFilterChange } = this.props;
         const value = target.value;
         const name = target.name;
+
         this.setState({ [name]: value }, () => onFilterChange(this.state));
     }
 
@@ -18,7 +19,7 @@ export class NoteFilter extends React.Component {
                     <option value="text">Text</option>
                     <option value="video">Video</option>
                     <option value="photo">Photo</option>
-                    <option value="Todo">ToDo</option>
+                    <option value="todo">To-Do</option>
                 </select>
             </div>
         )

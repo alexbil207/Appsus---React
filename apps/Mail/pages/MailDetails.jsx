@@ -6,6 +6,10 @@ export class MailDetails extends React.Component {
     state = {
         mail: null,
         isRead: null,
+        reply: {
+            text: '',
+            url: '',
+        }
     }
     componentDidMount() {
         const id = this.props.match.params.mailId;
@@ -20,6 +24,9 @@ export class MailDetails extends React.Component {
             mailId: mail.id,
             field: 'isRead',
         });
+    }
+    addReply = (replyInfo) => {
+        console.log(replyInfo)
     }
 
     render() {

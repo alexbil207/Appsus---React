@@ -32,6 +32,10 @@ export class NoteApp extends React.Component {
         noteService.noteUpdate(updateInfo).then(() => this.loadNotes())
     }
 
+    pinNote = (note) => {
+        noteService.pinNote(note.id).then(() => this.loadNotes())
+    }
+
 
     render() {
         const { notes, isEditClicked } = this.state;
@@ -42,7 +46,7 @@ export class NoteApp extends React.Component {
                     <NoteController addNote={this.addNote} />
                     <NoteFilter />
                 </section>
-                <NoteList notes={notes} removeNote={this.removeNote} noteUpdate={this.noteUpdate} />
+                <NoteList notes={notes} removeNote={this.removeNote} pinNote={this.pinNote} noteUpdate={this.noteUpdate} />
             </React.Fragment>
         )
     }

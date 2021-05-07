@@ -2,6 +2,7 @@ import { noteService } from './services/note.service.js'
 import { NoteController } from './cmps/NoteController.jsx'
 import { NoteFilter } from './cmps/NoteFilter.jsx'
 import { NoteList } from './cmps/NoteList.jsx'
+import { EditNote } from './cmps/EditNote.jsx'
 // import { eventBusService } from './cmps/NoteList.jsx'
 
 
@@ -9,6 +10,7 @@ export class NoteApp extends React.Component {
     state = {
         notes: null,
         filterBy: null,
+        isEditClicked: false,
     }
     componentDidMount() {
         this.loadNotes()
@@ -33,7 +35,7 @@ export class NoteApp extends React.Component {
 
 
     render() {
-        const { notes } = this.state;
+        const { notes, isEditClicked } = this.state;
         if (!notes) return <div>Loading...</div>
         return (
             <React.Fragment>

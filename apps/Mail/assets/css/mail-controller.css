@@ -6,19 +6,21 @@
   background-color: rgba(129, 0, 0, 0.8);
 }
 
-.controller-container button {
-  color: #fff;
-  background-color: #810000;
-  border-radius: 15px;
-  padding: 18px 36px;
-  font-size: 1.3rem;
-  cursor: pointer;
-  transition: ease-out 0.8s;
+.controller-container .compose-btn::before {
+  content: "New Mail";
 }
-.controller-container button:hover {
+
+.controller-container .compose-btn {
   color: #810000;
   background-color: #f0f0f2;
-  letter-spacing: 1px;
+  border-radius: 15px;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+}
+.controller-container .compose-btn:hover {
+  letter-spacing: 1.5px;
 }
 
 .controller-container select {
@@ -28,6 +30,14 @@
   background-color: transparent;
   outline: none;
   color: white;
+}
+
+.controller-container input {
+  line-height: 1.5rem;
+}
+
+.controller-container input::placeholder {
+  color: #810000;
 }
 
 .controller-container option {

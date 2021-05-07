@@ -23,7 +23,7 @@ export class MailController extends React.Component {
                     <option value="isFavorite">Favorite</option>
                     <option value="isRead">Unread</option>
                 </select>
-                <button className="compose-btn" onClick={() => newMail()}>Compose</button>
+                <button className="compose-btn" onClick={() => newMail()}></button>
                 <div className="mail-filter">
                     <label htmlFor="text-input">🔍</label>
                     <input name="text" type="text" id="text-input" placeholder="Search" onChange={this.handleChanges} />

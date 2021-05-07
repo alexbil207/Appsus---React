@@ -32,7 +32,7 @@ const gMails = [
         isRead: false,
         isFavorite: true,
         sentAt: 1620315000000,
-        url,
+        url: null,
         replies: []
     },
     {
@@ -45,7 +45,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: 1620314000000,
-        url,
+        url: null,
         replies: []
     },
     {
@@ -58,7 +58,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: 1620313000000,
-        url,
+        url: null,
         replies: []
     },
     {
@@ -71,7 +71,7 @@ const gMails = [
         isRead: false,
         isFavorite: true,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -84,7 +84,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -97,7 +97,7 @@ const gMails = [
         isRead: true,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -110,7 +110,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -123,7 +123,7 @@ const gMails = [
         isRead: true,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -136,7 +136,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -149,7 +149,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
     {
@@ -166,7 +166,7 @@ Eaque veritatis, assumenda amet maxime iure quos illum ad voluptates necessitati
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
-        url,
+        url: null,
         replies: []
     },
 

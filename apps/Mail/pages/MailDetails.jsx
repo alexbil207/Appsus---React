@@ -1,5 +1,6 @@
 import { mailService } from '../services/mail.service.js'
 import { ReplyCmp } from '../cmps/ReplyCmp.jsx';
+import { LoadingCmps } from '../../../cmps/LoadingCmps.jsx';
 
 export class MailDetails extends React.Component {
     state = {
@@ -23,7 +24,7 @@ export class MailDetails extends React.Component {
 
     render() {
         const { mail } = this.state;
-        if (!mail) return <h1>Loading..</h1>
+        if (!mail) return <LoadingCmps />
         const { replies } = mail;
         return <section key={mail.id} className="mail-details-container container flex column">
             <p className="mail-data"><b>From: </b>{mail.from}</p>

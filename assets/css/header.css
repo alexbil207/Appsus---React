@@ -13,14 +13,26 @@
   cursor: pointer;
 }
 
+.nav-btn img:hover {
+  transition: 1s;
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
 .logo {
   color: #810000;
-  font-family: 'Gloria Hallelujah', cursive;
+  font-family: "Gloria Hallelujah", cursive;
   font-size: 1.3rem;
 }
 
 .logo h1 {
   text-shadow: 2px 1px 0 #ce8c8c;
+}
+
+.logo h1:hover {
+  transition: 1s;
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 .menu-container {

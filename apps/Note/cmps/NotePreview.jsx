@@ -1,7 +1,6 @@
 import { TextNote } from './TextNote.jsx'
 import { PhotoNote } from './PhotoNote.jsx'
 import { VideoNote } from './VideoNote.jsx'
-import { EditNote } from './EditNote.jsx';
 import { TodoNote } from './TodoNote.jsx';
 
 
@@ -12,7 +11,6 @@ export class NotePreview extends React.Component {
         isPinned: false,
         color: null,
         isColorShown: false,
-        isEditClicked: false,
     }
 
     componentDidMount() {
@@ -29,15 +27,12 @@ export class NotePreview extends React.Component {
     }
 
 
-
     render() {
-        const { note, type, color, isColorShown, isEditClicked } = this.state;
+        const { note, type, color, isColorShown } = this.state;
         const { removeNote, pinNote } = this.props;
-        //console.log(pinNote);
         if (!note) return <h1>Loading...</h1>
         return (
             <article id={note.id} className={`note-preview ${note.color} ${color}`}>
-                {isEditClicked === true && < EditNote note={note} isEditClicked={isEditClicked} />}
                 {type === 'text' && <TextNote note={note} />}
                 {type === 'photo' && <PhotoNote note={note} />}
                 {type === 'video' && <VideoNote note={note} />}

@@ -46,3 +46,8 @@ i {
 textarea {
   resize: none;
 }
+
+.loading-gif {
+  height: calc(100vh - 85px);
+  width: 100%;
+}

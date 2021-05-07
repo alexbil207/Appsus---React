@@ -2,6 +2,7 @@ import { mailService } from './services/mail.service.js'
 import { MailController } from './cmps/MailController.jsx'
 import { MailList } from './cmps/MailList.jsx'
 import { NewMail } from './cmps/NewMail.jsx'
+import { LoadingCmps } from '../../cmps/LoadingCmps.jsx'
 
 export class MailApp extends React.Component {
     state = {
@@ -37,7 +38,7 @@ export class MailApp extends React.Component {
         if (!mails) return (
             <React.Fragment>
                 <MailController />
-                <h1>Loading......</h1>
+                <LoadingCmps />
             </React.Fragment>
         )
         return (

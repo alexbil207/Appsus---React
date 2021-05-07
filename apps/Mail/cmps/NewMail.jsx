@@ -14,8 +14,6 @@ export class NewMail extends React.Component {
     }
     onSubmit = (ev) => {
         ev.preventDefault();
-    }
-    onClick = () => {
         const { addMail, newMail } = this.props;
         newMail();
         addMail(this.state);
@@ -34,8 +32,7 @@ export class NewMail extends React.Component {
                 <textarea name="body" placeholder="Body" onChange={this.handleChanges} required></textarea>
                 <div className="btns flex" >
                     <button onClick={() => newMail()}>Close</button>
-                    <input type="submit" onSubmit={this.onSubmit} onClick={this.onClick} />
-                    {/* <button onClick={this.onSubmit}>Submit</button> */}
+                    <button onClick={this.onSubmit}>Submit</button>
                 </div>
             </form>
 

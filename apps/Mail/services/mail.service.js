@@ -48,8 +48,8 @@ function getfilterBy(filterBy) {
             case 'isRead':
                 filteredMailes = mails.filter(mail => mail[category] === false);
                 break;
-            case 'all':
-                filteredMailes = mails
+            case 'inbox':
+                filteredMailes = mails.filter(mail => mail.isSend === false);
                 break;
         }
         if (text) return filteredMailes.filter(mail => mail.subject.includes(text));

@@ -7,7 +7,7 @@ import { LoadingCmps } from '../../cmps/LoadingCmps.jsx'
 export class MailApp extends React.Component {
     state = {
         mails: null,
-        filterBy: null,
+        filterBy: { category: 'inbox' },
         isNewClicked: false,
     }
     componentDidMount() {

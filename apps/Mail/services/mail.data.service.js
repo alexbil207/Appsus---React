@@ -58,7 +58,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: 1620313000000,
-        url: null,
+        url: 'apps\Mail\assets\mail_img\zenni.gif',
         replies: []
     },
     {

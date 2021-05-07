@@ -17,6 +17,10 @@
   outline: 1px solid slategrey;
 }
 
+.new-mail-container {
+  padding: 10px;
+}
+
 .mail-card {
   border-bottom: 1px solid rgba(177, 173, 173);
   margin-bottom: 1px;
@@ -25,9 +29,7 @@
 }
 
 .mail-card:hover {
-  transition: 0.3s;
   opacity: 0.8;
-  transform: scale(1.005);
   background-color: #810000;
   color: white;
 }

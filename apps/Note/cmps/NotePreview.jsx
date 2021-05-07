@@ -2,7 +2,7 @@ import { TextNote } from './TextNote.jsx'
 import { PhotoNote } from './PhotoNote.jsx'
 import { VideoNote } from './VideoNote.jsx'
 import { EditNote } from './EditNote.jsx';
-import { noteService } from '../services/note.service.js';
+import { TodoNote } from './TodoNote.jsx';
 
 
 export class NotePreview extends React.Component {
@@ -26,7 +26,6 @@ export class NotePreview extends React.Component {
         this.setState(prevState => ({ ...prevState, color: value }), () => console.log(this.state)
         )
         note.color = value;
-        noteService.updateNoteColor(note, { value }) //
     }
 
 
@@ -42,6 +41,7 @@ export class NotePreview extends React.Component {
                 {type === 'text' && <TextNote note={note} />}
                 {type === 'photo' && <PhotoNote note={note} />}
                 {type === 'video' && <VideoNote note={note} />}
+                {type === 'todo' && <TodoNote note={note} />}
                 <div className="preview-btns flex space-between">
                     <button onClick={() => removeNote(note)}><i className="fas fa-trash-alt fa-2x"></i></button>
                     <button onClick={() => this.setState({ isColorShown: !isColorShown })} ><i className="fas fa-palette fa-2x"></i></button>

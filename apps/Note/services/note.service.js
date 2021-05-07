@@ -17,6 +17,14 @@ const KEY = 'notes';
 var gNotes = [
     {
         id: utilService.makeId(),
+        type: "todo",
+        isPinned: true,
+        tasks: ['sleep', 'sprint3', 'learn react!'],
+        createdAt: Date.now(),
+        color: "yellow",
+    },
+    {
+        id: utilService.makeId(),
         type: "text",
         isPinned: true,
         text: "Welcome to the notes app",
@@ -137,7 +145,7 @@ function addNote(noteInfo) {
             notes.unshift(_createNoteVideo(noteInfo));
             break;
         case 'todo':
-            notes.unshift(createNoteTodos(noteInfo));
+            notes.unshift(_createNoteTodos(noteInfo));
             break;
 
     }
@@ -149,14 +157,8 @@ function pinNote(note) {
     console.log('note', note);
 }
 
-function updateNoteColor(note, value) {
-    // console.log('note', note);
-    // noteId = note.id
-    // const idx = getNoteById(noteId)
-    // gNotes[idx].color = value
-
-    // storageService.saveToStorage(KEY, notes);
-    // return Promise.resolve();
+function updateNoteColor() {
+    console.log('for leter')
 }
 
 function _createNoteImg(noteInfo) {
@@ -197,6 +199,19 @@ function _createNoteVideo(noteInfo) {
         type: "video",
         isPinned: false,
         url: input,
+        createdAt: Date.now(),
+        color: "green-pastel",
+    }
+}
+
+function _createNoteTodos(noteInfo) {
+    let { input } = noteInfo;
+    input = input.split(',');
+    return {
+        id: utilService.makeId(),
+        type: "todo",
+        isPinned: false,
+        tasks: input,
         createdAt: Date.now(),
         color: "green-pastel",
     }

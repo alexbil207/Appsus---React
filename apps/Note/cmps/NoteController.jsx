@@ -27,7 +27,6 @@ export class NoteController extends React.Component {
     handleChange = ({ target }) => {
         const field = target.name
         const value = target.value
-        console.log(value);
         this.setState(prevState => ({ ...prevState, [field]: value }))
     }
 

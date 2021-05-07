@@ -50,7 +50,8 @@
   position: absolute;
   top: 20%;
   left: 10%;
-  background-color: #fff;
+  background-color: rgba(129, 0, 0, 1);
+  color: white;
 }
 
 .new-mail-container {

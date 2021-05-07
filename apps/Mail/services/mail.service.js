@@ -71,10 +71,12 @@ function getMailById(mailId, isIdx = false) {
 }
 
 function removeMail(mailId) {
-    const idx = getMailById(mailId, true)
     const mails = storageService.loadFromStorage(KEY);
-    mails.splice(idx, 1)
-    storageService.saveToStorage(KEY, mails);
+    console.log('res')
+    getMailById(mailId, true).then(idx => {
+        mails.splice(idx, 1);
+        storageService.saveToStorage(KEY, mails);
+    })
     return Promise.resolve();
 }
 
@@ -112,9 +114,6 @@ function _saveBooksToStorage() {
 }
 
 
-
-// Show Time in readble format
-//new Date().toLocaleString()
 
 
 

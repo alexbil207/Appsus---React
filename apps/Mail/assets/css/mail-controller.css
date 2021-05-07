@@ -1,19 +1,24 @@
 /*### mail controller Cmp ###*/
 
-.controller-container, .controller-container option {
+.controller-container,
+.controller-container option {
   padding: 10px 10px;
   background-color: rgba(129, 0, 0, 0.8);
 }
 
-.controller-container button:hover {
-  transition: 0.3s;
-  opacity: 0.8;
-  transform: scale(1.2) rotate(1deg);
-  background-color: greenyellow;
+.controller-container button {
+  color: #fff;
+  background-color: #810000;
+  border-radius: 15px;
+  padding: 18px 36px;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: ease-out 0.8s;
 }
-
-.controller-container input[type="text"]::placeholder {
+.controller-container button:hover {
   color: #810000;
+  background-color: #f0f0f2;
+  letter-spacing: 1px;
 }
 
 .controller-container select {
@@ -22,10 +27,11 @@
   font-size: 1.1rem;
   background-color: transparent;
   outline: none;
+  color: white;
 }
 
-.controller-container option, .controller-container select {
-  color: #fff;
+.controller-container option {
+  color: rgb(255, 255, 255);
 }
 
 .new-mail-container {
@@ -50,6 +56,6 @@
   height: 100%;
 }
 
-.btns>* {
+.btns > * {
   flex: 1;
 }

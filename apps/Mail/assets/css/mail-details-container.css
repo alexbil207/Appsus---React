@@ -14,7 +14,7 @@ hr {
   overflow-y: scroll;
   align-items: center;
   font-size: 1.4rem;
-  height: 70vh;
+  height: 50vh;
 }
 
 .mail-body p {
@@ -31,11 +31,27 @@ hr {
 }
 
 .nav-btns button {
-  margin: 10px 0;
-  width: 100px;
-  height: 25px;
+  color: #fff;
+  background-color: #810000;
+  border-radius: 15px;
+  padding: 9px 18px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: ease-out 0.8s;
+  font-family: rock;
 }
 
-.back-btn:hover::before {
-  content: "⬅";
+.nav-btns .reply-btn {
+  background-color: #2ea51f;
+}
+
+.nav-btns .reply-btn:hover {
+  background-color: #f0f0f2;
+  color: #2ea51f;
+}
+
+.nav-btns button:hover {
+  color: #810000;
+  background-color: #f0f0f2;
+  letter-spacing: 1px;
 }

@@ -39,16 +39,16 @@ export class MailPreview extends React.Component {
         if (!mail) return <h1>Loading!</h1>
         return (
             <div className={`mail-card flex space-between align-center ${isRead ? '' : 'unread'}`} key={mail.id} >
-                <img name="isFavorite" src={`./apps/Mail/assets/icons/${isFavorite ? "star_gold.svg" : "star.svg"}`}
-                    onClick={this.handleChanges} />
+                <label title="Add/Remove to Favorites"> <img name="isFavorite" src={`./apps/Mail/assets/icons/${isFavorite ? "star_gold.svg" : "star.svg"}`}
+                    onClick={this.handleChanges} /></label>
                 <Link className="flex space-between" to={`/Mail/${mail.id}`}>
                     <h4>From: {this.handleMailAddress(mail.from)}</h4>
                     <p>{mail.subject}</p>
                     <h4>{new Date(mail.sentAt).toLocaleString()}</h4>
                 </Link>
                 <div className="mail-btns">
-                    <button onClick={() => removeMail(mail)}>🗑️</button>
-                    <button name="isRead" onClick={this.handleChanges}>{isRead ? '📩' : '✉️'}</button>
+                    <label title="Delete mail"> <button onClick={() => removeMail(mail)}>🗑️</button></label>
+                    <label title="Mark as Read/Unread"><button name="isRead" onClick={this.handleChanges}>{isRead ? '📩' : '✉️'}</button></label>
                 </div>
             </div>
         )

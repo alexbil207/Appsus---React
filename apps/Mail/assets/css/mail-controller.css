@@ -1,6 +1,7 @@
 /*### mail controller Cmp ###*/
 
-.controller-container, .controller-container option {
+.controller-container,
+.controller-container option {
   padding: 10px 10px;
   background-color: rgba(129, 0, 0, 0.8);
 }
@@ -26,19 +27,11 @@
   font-size: 1.1rem;
   background-color: transparent;
   outline: none;
-}
-
-<<<<<<< HEAD
-.controller-container compose-btn {
-  border: none;
+  color: white;
 }
 
 .controller-container option {
-  color: #000;
-=======
-.controller-container option, .controller-container select {
-  color: #fff;
->>>>>>> f579e5aa18907446aaebb57762fbf9af30a02695
+  color: rgb(255, 255, 255);
 }
 
 .new-mail-container {

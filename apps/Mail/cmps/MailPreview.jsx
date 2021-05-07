@@ -27,6 +27,12 @@ export class MailPreview extends React.Component {
             });
         })
     }
+
+    handleMailAddress = (mail) => {
+        const idx = mail.indexOf('@');
+        return mail.slice(0, idx);
+    }
+
     render() {
         const { mail, isFavorite, isRead } = this.state;
         const { removeMail } = this.props;
@@ -36,8 +42,8 @@ export class MailPreview extends React.Component {
                 <img name="isFavorite" src={`./apps/Mail/assets/icons/${isFavorite ? "star_gold.svg" : "star.svg"}`}
                     onClick={this.handleChanges} />
                 <Link className="flex space-between" to={`/Mail/${mail.id}`}>
-                    <h4>From:{mail.from}</h4>
-                    <p>{mail.subject.length > 5 ? mail.subject.slice(0, 5) : mail.subject}...</p>
+                    <h4>From: {this.handleMailAddress(mail.from)}</h4>
+                    <p>{mail.subject.length > 7 ? mail.subject.slice(0, 7) : mail.subject}...</p>
                     <h4>{new Date(mail.sentAt).toLocaleString()}</h4>
                 </Link>
                 <div className="mail-btns">

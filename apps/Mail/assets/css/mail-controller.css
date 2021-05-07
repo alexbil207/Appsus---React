@@ -1,9 +1,8 @@
 /*### mail controller Cmp ###*/
 
-.controller-container {
+.controller-container, .controller-container option {
   padding: 10px 10px;
-  background-color: #810000;
-  opacity: 0.8;
+  background-color: rgba(129, 0, 0, 0.8);
 }
 
 .controller-container button {
@@ -22,7 +21,6 @@
 }
 
 .controller-container select {
-  color: #fff;
   border: none;
   width: 100px;
   font-size: 1.1rem;
@@ -30,12 +28,17 @@
   outline: none;
 }
 
+<<<<<<< HEAD
 .controller-container compose-btn {
   border: none;
 }
 
 .controller-container option {
   color: #000;
+=======
+.controller-container option, .controller-container select {
+  color: #fff;
+>>>>>>> f579e5aa18907446aaebb57762fbf9af30a02695
 }
 
 .new-mail-container {

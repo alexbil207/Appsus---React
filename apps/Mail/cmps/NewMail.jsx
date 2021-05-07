@@ -35,8 +35,8 @@ export class NewMail extends React.Component {
                 <label htmlFor="subject">Subject: <input name="subject" id="subject" type="text" onChange={this.handleChanges} required></input></label>
                 <textarea name="body" placeholder="Body" onChange={this.handleChanges} required></textarea>
                 <div className="btns flex" >
-                    <button onClick={() => newMail()}>Close</button>
-                    <button onClick={this.onSubmit}>Submit</button>
+                    <button className="close-btn" onClick={() => newMail()}>Close</button>
+                    <button className="submit-btn" onClick={this.onSubmit}>Submit</button>
                 </div>
             </form>
 

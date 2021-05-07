@@ -17,6 +17,10 @@ hr {
   height: 70vh;
 }
 
+.mail-body p {
+  margin-bottom: 2rem;
+}
+
 .mail-body img {
   width: 300px;
 }

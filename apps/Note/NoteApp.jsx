@@ -13,7 +13,6 @@ export class NoteApp extends React.Component {
     }
     componentDidMount() {
         this.loadNotes()
-
     }
     loadNotes() {
         noteService.query().then(notes => {

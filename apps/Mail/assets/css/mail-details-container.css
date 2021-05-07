@@ -24,6 +24,6 @@ hr {
     height: 25px;
 }
 
-.nav-btns button:hover::before {
+.back-btn:hover::before {
     content: "⬅";
 }

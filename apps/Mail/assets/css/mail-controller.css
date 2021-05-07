@@ -2,7 +2,8 @@
 
 .controller-container {
   padding: 10px 10px;
-  box-shadow: inset -1px 20px 23px 10px rgb(84, 85, 104);
+  background-color: #810000;
+  opacity: 0.8;
 }
 
 .controller-container button:hover {

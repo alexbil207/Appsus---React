@@ -26,8 +26,8 @@ export class NewMail extends React.Component {
         const { newMail } = this.props;
         return (
             <form className="new-mail-container container flex column">
-                <label htmlFor="to">To: <input name="to" id="to" type="text" onChange={this.handleChanges}></input></label>
-                <label htmlFor="from">From: <input name="from" id="from" type="text" onChange={this.handleChanges}></input></label>
+                <label htmlFor="to">To: <input name="to" id="to" type="email" onChange={this.handleChanges}></input></label>
+                <label htmlFor="from">From: <input name="from" id="from" type="email" onChange={this.handleChanges}></input></label>
                 <label htmlFor="subject">Subject: <input name="subject" id="subject" type="text" onChange={this.handleChanges}></input></label>
                 <textarea name="body" placeholder="Body" onChange={this.handleChanges}></textarea>
                 <div className="btns flex" >

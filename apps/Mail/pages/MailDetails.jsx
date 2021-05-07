@@ -39,7 +39,7 @@ export class MailDetails extends React.Component {
             </div>
             <div className="nav-btns flex space-between">
                 <button className="back-btn" onClick={() => this.props.history.push('/Mail')}>Back</button>
-                <button>Reply</button>
+                <button className="reply-btn">Reply</button>
 
             </div>
         </section>

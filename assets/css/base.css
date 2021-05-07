@@ -49,9 +49,18 @@ i {
 
 textarea {
   resize: none;
+  font-family: rock;
 }
 
 .loading-gif {
   height: calc(100vh - 85px);
   width: 100%;
+}
+
+input[type="text"]::placeholder {
+  font-family: rock;
+}
+
+select {
+  font-family: rock;
 }

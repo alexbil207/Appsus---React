@@ -1,29 +1,37 @@
 /*### mail-details-container ###*/
 
 hr {
-    width: 90%;
-    margin: 5px auto;
+  width: 90%;
+  margin: 5px auto;
 }
 
 .mail-body {
-    border: 1px solid #000;
-    width: 100%;
-    padding: 10px;
-    height: calc(100vh - 85px - 150px);
-    text-align: center;
-    overflow-y: scroll;
+  border: 1px solid #000;
+  width: 100%;
+  padding: 10px;
+  height: calc(100vh - 85px - 150px);
+  text-align: center;
+  overflow-y: scroll;
+  align-items: center;
+  font-size: 1.4rem;
+  height: 70vh;
+}
+
+.mail-body img {
+  width: 300px;
 }
 
 .mail-data {
-    padding: 2px 0;
+  padding: 2px 0;
+  font-size: 1.4rem;
 }
 
 .nav-btns button {
-    margin: 10px 0;
-    width: 100px;
-    height: 25px;
+  margin: 10px 0;
+  width: 100px;
+  height: 25px;
 }
 
 .back-btn:hover::before {
-    content: "⬅";
+  content: "⬅";
 }

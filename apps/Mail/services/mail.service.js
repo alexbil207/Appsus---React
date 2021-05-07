@@ -83,6 +83,8 @@ function mailUpdate(changeInfo) {
 
 function _createMail(mailInfo) {
     const { from, to, subject, body, isSend, isRead } = mailInfo;
+    let { url } = mailInfo;
+    if (!url) url = null;
     return {
         id: utilService.makeId(),
         subject,
@@ -92,6 +94,7 @@ function _createMail(mailInfo) {
         isRead,
         isFavorite: false,
         isSend,
+        url,
         sentAt: Date.now(),
         reply: {
             from: '',

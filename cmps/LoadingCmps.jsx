@@ -1,7 +1,8 @@
 export function LoadingCmps() {
     return (
-        <div className="loading-gif flex justify-center align-center">
-            <img src="https://media.giphy.com/media/3o7bu3XilJ5BOiSGic/source.gif" />
+        <div className="loading-gif flex justify-center align-center column">
+            <h1>Loading.......</h1>
+            <img src="https://i.gifer.com/XOsX.gif" />
         </div>
     )
 }

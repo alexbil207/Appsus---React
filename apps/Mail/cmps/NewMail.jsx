@@ -16,6 +16,8 @@ export class NewMail extends React.Component {
     onSubmit = (ev) => {
         ev.preventDefault();
         const { addMail, newMail } = this.props;
+        const { to, body, subject } = this.state;
+        if (!to || !body || !subject) return
         newMail();
         addMail(this.state);
     }

@@ -44,7 +44,7 @@ export class MailPreview extends React.Component {
                 <Link className="flex space-between" to={`/Mail/${mail.id}`}>
                     <h4>From: {this.handleMailAddress(mail.from)}</h4>
                     <p>{mail.subject}</p>
-                    <h4>{new Date(mail.sentAt).toLocaleString()}</h4>
+                    <h4>{new Date(mail.sentAt).toLocaleString('he-IL')}</h4>
                 </Link>
                 <div className="mail-btns">
                     <label title="Delete mail"> <button onClick={() => removeMail(mail)}>🗑️</button></label>

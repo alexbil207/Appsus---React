@@ -34,9 +34,6 @@ export class MailApp extends React.Component {
         this.setState({ filterBy }, () => this.loadMails())
     }
 
-    addReply = (replyInfo) => {
-        console.log(replyInfo)
-    }
     render() {
         const { mails, isNewClicked } = this.state;
         if (!mails) return (

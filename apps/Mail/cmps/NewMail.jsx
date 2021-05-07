@@ -14,6 +14,8 @@ export class NewMail extends React.Component {
     }
     onSubmit = (ev) => {
         ev.preventDefault();
+    }
+    onClick = () => {
         const { addMail, newMail } = this.props;
         newMail();
         addMail(this.state);
@@ -26,13 +28,14 @@ export class NewMail extends React.Component {
         const { newMail } = this.props;
         return (
             <form className="new-mail-container container flex column">
-                <label htmlFor="to">To: <input name="to" id="to" type="email" onChange={this.handleChanges}></input></label>
-                <label htmlFor="from">From: <input name="from" id="from" type="email" onChange={this.handleChanges}></input></label>
-                <label htmlFor="subject">Subject: <input name="subject" id="subject" type="text" onChange={this.handleChanges}></input></label>
-                <textarea name="body" placeholder="Body" onChange={this.handleChanges}></textarea>
+                <label htmlFor="to">To: <input name="to" id="to" type="email" onChange={this.handleChanges} required></input></label>
+                <label htmlFor="from">From: <input name="from" id="from" type="email" onChange={this.handleChanges} required></input></label>
+                <label htmlFor="subject">Subject: <input name="subject" id="subject" type="text" onChange={this.handleChanges} required></input></label>
+                <textarea name="body" placeholder="Body" onChange={this.handleChanges} required></textarea>
                 <div className="btns flex" >
                     <button onClick={() => newMail()}>Close</button>
-                    <button onClick={this.onSubmit}>Submit</button>
+                    <input type="submit" onSubmit={this.onSubmit} onClick={this.onClick} />
+                    {/* <button onClick={this.onSubmit}>Submit</button> */}
                 </div>
             </form>
 

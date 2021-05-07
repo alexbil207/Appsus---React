@@ -114,14 +114,21 @@ var gNotes = [
 
 ];
 
-function query() {
+function query(filterBy) {
     const notes = storageService.loadFromStorage(KEY)
     if (notes) {
-        return Promise.resolve(notes)
+        return Promise.resolve(getfilterBy(filterBy, notes));
     }
     _saveNotesToStorage();
-    return Promise.resolve(gNotes)
+    return Promise.resolve(getfilterBy(filterBy, gNotes));
 }
+
+function getfilterBy(filterBy, notes) {
+    const { type } = filterBy;
+    if (type === 'all') return Promise.resolve(notes);
+    return Promise.resolve(notes.filter(note => note.type === type));
+}
+
 
 function removeNote(noteId) {
     const notes = storageService.loadFromStorage(KEY);

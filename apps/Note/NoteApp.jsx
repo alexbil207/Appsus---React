@@ -8,13 +8,15 @@ import { LoadingCmps } from '../../cmps/LoadingCmps.jsx'
 export class NoteApp extends React.Component {
     state = {
         notes: null,
-        filterBy: null,
+        filterBy: {
+            type: 'all',
+        },
     }
     componentDidMount() {
         this.loadNotes()
     }
     loadNotes() {
-        noteService.query().then(notes => {
+        noteService.query(this.state.filterBy).then(notes => {
             this.setState(() => ({ notes }))
         })
     }
@@ -26,26 +28,27 @@ export class NoteApp extends React.Component {
         noteService.removeNote(note.id).then(() => this.loadNotes())
     }
 
-    noteUpdate(updateInfo) {
-        noteService.noteUpdate(updateInfo).then(() => this.loadNotes())
-    }
-
-    pinNote = (note) => {
-        noteService.pinNote(note.id).then(() => this.loadNotes())
+    onFilterChange = (filterBy) => {
+        this.setState({ filterBy }, () => this.loadNotes())
     }
 
 
     render() {
         const { notes } = this.state;
-        if (!notes) return <LoadingCmps />
+        if (!notes) return (
+            <React.Fragment>
+                < NoteFilter onFilterChange={this.onFilterChange} />
+                <LoadingCmps />
+            </React.Fragment>
+        )
         return (
             <React.Fragment>
                 <section className="controller-section">
                     <NoteController addNote={this.addNote} />
-                    <NoteFilter />
+                    <NoteFilter onFilterChange={this.onFilterChange} />
                 </section>
-                <NoteList notes={notes} removeNote={this.removeNote} pinNote={this.pinNote} noteUpdate={this.noteUpdate} />
-            </React.Fragment>
+                <NoteList notes={notes} removeNote={this.removeNote} noteUpdate={this.noteUpdate} />
+            </React.Fragment >
         )
     }
 }

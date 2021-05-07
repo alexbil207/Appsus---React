@@ -13,6 +13,7 @@ const gMails = [
         isRead: true,
         isFavorite: false,
         sentAt: 1620318859000,
+        url: 'https://i.gifer.com/Xuw0.gif',
         replies: [{
             id: utilService.makeId(),
             from: 'alex207@gmail.com',
@@ -31,30 +32,33 @@ const gMails = [
         isRead: false,
         isFavorite: true,
         sentAt: 1620315000000,
+        url,
         replies: []
     },
     {
         id: utilService.makeId(),
-        subject: 'test3',
-        from: 'alex207@gmail.com',
+        subject: 'Congratulate Nimrod for 3 years at...',
+        from: 'notifications-noreply@linkedin.com',
         to: 'moshe123@gmail.com',
-        body: 'Pick up!',
+        body: 'Congratulate Nimrod Nir for 3 years at Samsung Israel R&D Center - SIRC,Congratulate Nofar Zimelman Avital and 4 others for starting new positions',
         isSend: false,
         isRead: false,
         isFavorite: false,
-        sentAt: Date.now(),
+        sentAt: 1620314000000,
+        url,
         replies: []
     },
     {
         id: utilService.makeId(),
-        subject: 'test4',
-        from: 'alex207@gmail.com',
-        to: 'moshe123@gmail.com',
-        body: 'Pick up!',
+        subject: 'Incredible glasses shouldnt hurt your wallet.',
+        from: 'zennioptical@mail.zennioptical.com',
+        to: 'alex207@gmail.com',
+        body: 'Incredible glasses shouldnt hurt your wallet, only on zenni.com!',
         isSend: false,
         isRead: false,
         isFavorite: false,
-        sentAt: Date.now(),
+        sentAt: 1620313000000,
+        url,
         replies: []
     },
     {
@@ -67,6 +71,7 @@ const gMails = [
         isRead: false,
         isFavorite: true,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -79,6 +84,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -91,6 +97,7 @@ const gMails = [
         isRead: true,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -103,6 +110,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -115,6 +123,7 @@ const gMails = [
         isRead: true,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -127,6 +136,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -139,6 +149,7 @@ const gMails = [
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
     {
@@ -155,6 +166,7 @@ Eaque veritatis, assumenda amet maxime iure quos illum ad voluptates necessitati
         isRead: false,
         isFavorite: false,
         sentAt: Date.now(),
+        url,
         replies: []
     },
 

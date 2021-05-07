@@ -18,7 +18,7 @@ export class HeaderApp extends React.Component {
                         <Link to='/'><h1>App/sus</h1></Link>
                     </div>
                     <div className="nav-btn">
-                        <img src="../assets/icons/menu.svg" onClick={this.closeMenu} />
+                        <img src="./assets/icons/menu.svg" onClick={this.closeMenu} />
                     </div>
                 </div>
                 <div className={isMenuShown ? 'menu-container grid' : 'menu-container hidden'}>

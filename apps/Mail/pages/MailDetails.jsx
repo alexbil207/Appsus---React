@@ -35,8 +35,9 @@ export class MailDetails extends React.Component {
                 {replies && replies.map(reply => <ReplyCmp reply={reply} />)}
                 <p>{mail.body}</p>
             </div>
-            <div className="nav-btns">
-                <button onClick={() => this.props.history.push('/Mail')}>Back</button>
+            <div className="nav-btns flex space-between">
+                <button className="back-btn" onClick={() => this.props.history.push('/Mail')}>Back</button>
+                <button>Reply</button>
 
             </div>
         </section>

@@ -22,15 +22,12 @@ export class NewMail extends React.Component {
         addMail(this.state);
     }
 
-
-
-
     render() {
         const { newMail } = this.props;
         return (
             <form className="new-mail-container container flex column">
                 <label htmlFor="to">To: <input name="to" id="to" type="email" onChange={this.handleChanges} required></input></label>
-                <label htmlFor="from">From: <input name="from" id="from" type="email" defaultValue={this.state.from}></input></label>
+                <label htmlFor="from">From: <input name="from" id="from" type="email" value={this.state.from}></input></label>
                 <label htmlFor="url">Image URL: <input name="url" id="url" type="url" onChange={this.handleChanges}></input></label>
                 <label htmlFor="subject">Subject: <input name="subject" id="subject" type="text" onChange={this.handleChanges} required></input></label>
                 <textarea name="body" placeholder="Body" onChange={this.handleChanges} required></textarea>

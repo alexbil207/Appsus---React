@@ -9,6 +9,7 @@ export const mailService = {
     removeMail,
     mailUpdate,
     getMailById,
+    createReplays
 
 }
 
@@ -18,7 +19,7 @@ const KEY = 'mails';
 function query(filterBy) {
     const mails = storageService.loadFromStorage(KEY);
     if (!mails) {
-        _saveBooksToStorage()
+        _saveToStorage()
         return Promise.resolve(getfilterBy(filterBy))
     }
     return Promise.resolve(getfilterBy(filterBy));
@@ -46,6 +47,16 @@ function getfilterBy(filterBy) {
         if (text) return Promise.resolve(filteredMailes.filter(mail => mail.subject.toLowerCase().includes(text)))
         else return Promise.resolve(filteredMailes);
     }
+}
+
+function createReplays(mailInfo) {
+    const { mailId } = mailInfo;
+    const mails = storageService.loadFromStorage(KEY);
+    return getMailById(mailId, true).then(idx => {
+        mails[idx].replies.unshift(_createReply(mailInfo))
+        storageService.saveToStorage(KEY, mails)
+        return Promise.resolve('done!');
+    })
 }
 
 function createMails(mailInfo) {
@@ -103,7 +114,16 @@ function _createMail(mailInfo) {
     }
 }
 
-function _saveBooksToStorage() {
+function _createReply(mailInfo) {
+    const { body } = mailInfo
+    return {
+        id: utilService.makeId(),
+        from: 'alex207@gmail.com',
+        body,
+        sentAt: Date.now(),
+    }
+}
+function _saveToStorage() {
     storageService.saveToStorage(KEY, mailDataService.gMails);
 }
 

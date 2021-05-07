@@ -16,21 +16,13 @@ const KEY = 'mails';
 
 
 function query(filterBy) {
-    const mails = storageService.loadFromStorage(KEY)
-    if (filterBy) {
-        if (mails.length) {
-            getfilterBy(filterBy);
-            return Promise.resolve(getfilterBy(filterBy));
-        }
-        return Promise.resolve(() => {
-            _saveBooksToStorage()
-            return Promise.resolve(getfilterBy(filterBy))
-        });
-    } else if (mails) {
-        return Promise.resolve(mails);
+    const mails = storageService.loadFromStorage(KEY);
+    if (!mails) {
+        _saveBooksToStorage()
+        return Promise.resolve(getfilterBy(filterBy))
     }
-    _saveBooksToStorage()
-    return Promise.resolve(storageService.loadFromStorage(KEY));
+    getfilterBy(filterBy);
+    return Promise.resolve(getfilterBy(filterBy));
 }
 
 function getfilterBy(filterBy) {

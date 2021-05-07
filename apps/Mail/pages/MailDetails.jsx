@@ -33,6 +33,7 @@ export class MailDetails extends React.Component {
             <p className="mail-data"><b>Subject: </b>{mail.subject}</p>
             <div className="mail-body flex column">
                 {replies && replies.map(reply => <ReplyCmp reply={reply} />)}
+                {mail.url && <img src={mail.url} />}
                 <p>{mail.body}</p>
             </div>
             <div className="nav-btns flex space-between">

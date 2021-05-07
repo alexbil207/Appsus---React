@@ -43,7 +43,7 @@ export class MailPreview extends React.Component {
                     onClick={this.handleChanges} />
                 <Link className="flex space-between" to={`/Mail/${mail.id}`}>
                     <h4>From: {this.handleMailAddress(mail.from)}</h4>
-                    <p>{mail.subject.length > 7 ? mail.subject.slice(0, 7) : mail.subject}...</p>
+                    <p>{mail.subject}</p>
                     <h4>{new Date(mail.sentAt).toLocaleString()}</h4>
                 </Link>
                 <div className="mail-btns">

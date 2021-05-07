@@ -5,11 +5,11 @@ import { NoteList } from './cmps/NoteList.jsx'
 import { LoadingCmps } from '../../cmps/LoadingCmps.jsx'
 
 
-
 export class NoteApp extends React.Component {
     state = {
         notes: null,
         filterBy: null,
+        isEditClicked: false,
     }
     componentDidMount() {
         this.loadNotes()
@@ -34,7 +34,7 @@ export class NoteApp extends React.Component {
 
 
     render() {
-        const { notes } = this.state;
+        const { notes, isEditClicked } = this.state;
         if (!notes) return <LoadingCmps />
         return (
             <React.Fragment>

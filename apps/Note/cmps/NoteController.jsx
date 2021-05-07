@@ -27,6 +27,7 @@ export class NoteController extends React.Component {
     handleChange = ({ target }) => {
         const field = target.name
         const value = target.value
+        console.log(value);
         this.setState(prevState => ({ ...prevState, [field]: value }))
     }
 
@@ -34,8 +35,6 @@ export class NoteController extends React.Component {
         const { addNote } = this.props;
         addNote(this.state);
         this.setState({ input: '' })
-
-
     }
 
     render() {

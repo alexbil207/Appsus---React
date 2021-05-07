@@ -15,6 +15,7 @@ hr {
   align-items: center;
   font-size: 1.4rem;
   height: 50vh;
+  margin-bottom: 5px;
 }
 
 .mail-body p {
@@ -34,11 +35,12 @@ hr {
   color: #fff;
   background-color: #810000;
   border-radius: 15px;
-  padding: 9px 18px;
+  padding: 9px 9px;
   font-size: 1.2rem;
   cursor: pointer;
   transition: ease-out 0.8s;
   font-family: rock;
+  margin: 5px;
 }
 
 .nav-btns .reply-btn {

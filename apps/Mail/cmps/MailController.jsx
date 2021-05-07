@@ -17,16 +17,16 @@ export class MailController extends React.Component {
         const { newMail } = this.props;
         return (
             <div className="controller-container container flex space-between align-center">
+                <select name="category" onChange={this.handleChanges}>
+                    <option value="inbox">Inbox</option>
+                    <option value="isSend">Sent</option>
+                    <option value="isFavorite">Favorite</option>
+                    <option value="isRead">Unread</option>
+                </select>
                 <button onClick={() => newMail()}>➕</button>
                 <div className="mail-filter">
                     <label htmlFor="text-input">🔍</label>
                     <input name="text" type="text" id="text-input" placeholder="Search" onChange={this.handleChanges} />
-                    <select name="category" onChange={this.handleChanges}>
-                        <option value="inbox">Inbox</option>
-                        <option value="isSend">Sent</option>
-                        <option value="isFavorite">Favorite</option>
-                        <option value="isRead">Unread</option>
-                    </select>
                 </div>
 
             </div>

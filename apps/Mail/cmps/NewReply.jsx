@@ -21,7 +21,8 @@ export class _NewReply extends React.Component {
         const { addReply } = this.props;
         const { body, mailId } = this.state;
         if (!body) return
-        addReply(this.state).then(() => this.props.history.push(`/Mail/${mailId}`));
+        addReply(this.state)
+        this.props.history.push(`/Mail/${mailId}`);
 
     }
     render() {

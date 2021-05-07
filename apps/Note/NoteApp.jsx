@@ -2,7 +2,6 @@ import { noteService } from './services/note.service.js'
 import { NoteController } from './cmps/NoteController.jsx'
 import { NoteFilter } from './cmps/NoteFilter.jsx'
 import { NoteList } from './cmps/NoteList.jsx'
-// import { eventBusService } from './cmps/NoteList.jsx'
 import { LoadingCmps } from '../../cmps/LoadingCmps.jsx'
 
 

@@ -381,7 +381,7 @@ const gMails = [
         isSend: false,
         isRead: false,
         isFavorite: false,
-        sentAt: 1620142553340,
+        sentAt: 1620142543340,
         url: null,
         replies: []
     },
@@ -394,20 +394,20 @@ const gMails = [
         isSend: false,
         isRead: false,
         isFavorite: false,
-        sentAt: 1620142553340,
+        sentAt: 1620132553340,
         url: null,
         replies: []
     },
     {
         id: utilService.makeId(),
         subject: 'Kells KS-398LC PM-112',
-        from: ' Lancer-CaptainKells@proctor.com',
+        from: 'Lancer@proctor.com',
         to: 'alex207@gmail.com',
         body: "I've finished reading your medical report on Knight-Sergeant Merric. The fact that he managed to survive long enough to reach the Prydwen and deliver his report is absolutely incredible.  The sacrifice that he made for the sake of the mission is a testament to his dedication and loyalty. We will be holding a memorial service on the ship's forecastle at sunset this evening. I sincerely hope you'll be able to attend. ",
         isSend: false,
         isRead: false,
         isFavorite: false,
-        sentAt: 1620142553340,
+        sentAt: 1620042453340,
         url: null,
         replies: []
     },

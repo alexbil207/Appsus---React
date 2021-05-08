@@ -25,6 +25,7 @@ export class MailDetails extends React.Component {
             field: 'isRead',
         });
     }
+
     addReply = (replyInfo) => {
         mailService.createReplays(replyInfo).then(() => this.props.history.push('/Mail'))
     }

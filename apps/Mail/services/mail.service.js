@@ -115,10 +115,13 @@ function _createMail(mailInfo) {
 
 function _createReply(mailInfo) {
     const { body } = mailInfo
+    let { url } = mailInfo;
+    if (!url) url = null;
     return {
         id: utilService.makeId(),
         from: 'alex207@gmail.com',
         body,
+        url,
         sentAt: Date.now(),
     }
 }

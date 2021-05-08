@@ -4,6 +4,7 @@ export function ReplyCmp({ reply }) {
             <p className="mail-data"><b>From: </b>{reply.from}</p>
             <p className="mail-data"><b>Date: </b>{new Date(reply.sentAt).toLocaleString('he-IL')}</p>
             <p className="mail-data">{reply.body}</p>
+            {reply.url && <img src={reply.url} />}
             <hr></hr>
         </div>
     )

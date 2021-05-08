@@ -21,11 +21,10 @@ export class NotePreview extends React.Component {
     handleChange = ({ target }) => {
         const { note } = this.props;
         const value = target.name
-        this.setState(prevState => ({ ...prevState, color: value }), () => console.log(this.state)
-        )
+        this.setState(prevState => ({ ...prevState, color: value }))
         note.color = value;
+        showUserMsg('Note color updated!', 'success')
     }
-
 
     render() {
         const { note, type, color, isColorShown } = this.state;

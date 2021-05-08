@@ -1,0 +1,17 @@
+.user-msg {
+  padding: 10px;
+  margin-inline-start: -180px;
+  z-index: 1;
+  width: 150px;
+  background-color: #810000;
+  opacity: 0.8;
+  color: white;
+}
+
+@media (max-width: 670px) {
+  .user-msg {
+    position: absolute;
+    top: 0;
+    right: 15%;
+  }
+}

@@ -10,6 +10,7 @@
 .search-type select,
 .search-type p {
   font-size: 1.2rem;
+  outline: none;
 }
 
 .search-type input,

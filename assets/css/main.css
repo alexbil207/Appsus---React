@@ -1,5 +1,6 @@
 @import url("../../apps/Mail/assets/css/mail-app-main.css");
 @import url("../../apps/Note/assets/css/note-app-main.css");
+@import url("./user-msg.css");
 @import url("./helpers.css");
 @import url("./base.css");
 @import url("./header.css");

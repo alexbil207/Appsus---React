@@ -74,7 +74,6 @@ function getMailById(mailId, isIdx = false) {
 
 function removeMail(mailId) {
     const mails = storageService.loadFromStorage(KEY);
-    console.log('res')
     getMailById(mailId, true).then(idx => {
         mails.splice(idx, 1);
         storageService.saveToStorage(KEY, mails);

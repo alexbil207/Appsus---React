@@ -20,9 +20,11 @@ export class MailApp extends React.Component {
     }
     addMail = (mailInfo) => {
         mailService.createMails(mailInfo).then(() => this.loadMails())
+        showUserMsg('Mail sent', 'success')
     }
     removeMail = (mail) => {
         mailService.removeMail(mail.id).then(() => this.loadMails())
+        showUserMsg('Mail removed!', 'error')
     }
 
     newMailClick = () => {

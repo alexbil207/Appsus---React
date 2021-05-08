@@ -27,6 +27,7 @@ export class MailDetails extends React.Component {
     }
     addReply = (replyInfo) => {
         mailService.createReplays(replyInfo).then(() => this.props.history.push('/Mail'))
+        showUserMsg('Reply sent!', 'success')
     }
 
     closeModal = () => {

@@ -35,6 +35,7 @@ export class NoteController extends React.Component {
         if (!this.state.input.length) return
         addNote(this.state);
         this.setState({ input: '' })
+        showUserMsg('Note added!', 'success')
     }
 
     render() {

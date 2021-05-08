@@ -1,5 +1,4 @@
 
-
 export function TextNote({ note }) {
     return (
         <React.Fragment>

@@ -26,6 +26,7 @@ export class NoteApp extends React.Component {
 
     removeNote = (note) => {
         noteService.removeNote(note.id).then(() => this.loadNotes())
+        showUserMsg('Note removed!', 'error')
     }
 
     onFilterChange = (filterBy) => {

@@ -1,6 +1,8 @@
 const { Link } = ReactRouterDOM;
 
 import { MenuList } from '../cmps/MenuList.jsx'
+import { UserMsg } from '../cmps/UserMsg.jsx'
+
 export class HeaderApp extends React.Component {
     state = {
         isMenuShown: false,
@@ -17,6 +19,7 @@ export class HeaderApp extends React.Component {
                     <div className="logo">
                         <Link to='/'><h1>App/sus</h1></Link>
                     </div>
+                    <div><UserMsg /> </div>
                     <div className="nav-btn">
                         <img src="./assets/icons/menu.svg" onClick={this.closeMenu} />
                     </div>

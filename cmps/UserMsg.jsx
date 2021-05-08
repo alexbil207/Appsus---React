@@ -6,7 +6,7 @@ export class UserMsg extends React.Component {
   removeEvent;
 
   state = {
-    msg: null
+    msg: null,
   }
 
   componentDidMount() {
@@ -21,13 +21,13 @@ export class UserMsg extends React.Component {
 
   render() {
     if (!this.state.msg) return <span></span>
+    setTimeout(() => {
+      this.setState({ msg: null })
+    }, 1500);
     const msgClass = this.state.msg.type || ''
     return (
       <section className={'user-msg ' + msgClass}>
         {this.state.msg.txt}
-        <button onClick={() => {
-          this.setState({ msg: null })
-        }}>x</button>
       </section>
     )
   }

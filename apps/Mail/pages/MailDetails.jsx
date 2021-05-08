@@ -48,7 +48,7 @@ export class MailDetails extends React.Component {
             <p className="mail-data"><b>Date: </b>{new Date(mail.sentAt).toLocaleString('he-IL')}</p>
             <p className="mail-data"><b>Subject: </b>{mail.subject}</p>
             <div className="mail-body flex column">
-                {replies && replies.map(reply => <ReplyCmp reply={reply} />)}
+                {replies && replies.map(reply => <ReplyCmp reply={reply} key={reply.id} />)}
                 <p>{mail.body}</p>
                 {mail.url && <img src={mail.url} />}
             </div>

@@ -6,6 +6,8 @@
 .preview-btns button,
 .note-header {
   padding: 5px;
+  border: none;
+  background-color: transparent;
 }
 
 .note-preview {
@@ -49,6 +51,7 @@ article h2,
   width: 45px;
   height: 45px;
   border-radius: 50%;
+  border: none;
 }
 
 .note-preview .colors {

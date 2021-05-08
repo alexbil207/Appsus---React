@@ -1,5 +1,5 @@
 .mail-container {
-  border: 1px solid rgb(170, 168, 168);
+  border: 1px solid #810000;
   height: calc(100vh - 85px - 75px);
   overflow-y: scroll;
 }
@@ -8,21 +8,17 @@
   width: 1em;
 }
 
-.mail-container::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
 .mail-container::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 6px rgb(56, 57, 80);
-  outline: 1px solid slategrey;
+  outline: 1px solid #810000;
 }
 
-.new-mail-container, .mail-card a {
+.new-mail-container,
+.mail-card a {
   padding: 10px;
 }
 
 .mail-card {
-  border-bottom: 1px solid rgba(177, 173, 173);
+  border-bottom: 1px solid #810000;
   margin-bottom: 1px;
   padding: 5px;
   color: #810000;
@@ -70,7 +66,8 @@
 }
 
 .unread {
-  box-shadow: inset -1px 20px 23px 10px rgba(84, 85, 104, 0.3);
+  background-color: rgb(201, 225, 246);
+  color: black;
 }
 
 @media (max-width: 670px) {

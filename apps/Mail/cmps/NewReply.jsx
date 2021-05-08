@@ -16,23 +16,20 @@ export class _NewReply extends React.Component {
         const value = ev.target.value;
         this.setState(prevState => ({ ...prevState, [field]: value }))
     }
-    onSubmit = (ev) => {
-        ev.preventDefault();
+    onSubmit = () => {
         const { addReply } = this.props;
-        const { body, mailId } = this.state;
+        const { body } = this.state;
         if (!body) return
         addReply(this.state)
-        this.props.history.push(`/Mail/${mailId}`);
-
     }
     render() {
-        const { mailId } = this.state;
+        const { closeModal } = this.props;
         return (
             <React.Fragment>
                 <label htmlFor="text">Image URL: <input name="url" id="url" type="url" onChange={this.handleChanges}></input></label>
                 <textarea name="body" placeholder="Body" onChange={this.handleChanges}></textarea>
                 <div className="btns flex" >
-                    <button className="close-btn" onClick={() => this.props.history.push(`/Mail/${mailId}`)}>Close</button>
+                    <button className="close-btn" onClick={() => { closeModal() }}>Close</button>
                     <button className="submit-btn" onClick={this.onSubmit}>Submit</button>
                 </div>
             </React.Fragment>

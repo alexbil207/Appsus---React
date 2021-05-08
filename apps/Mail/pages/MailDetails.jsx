@@ -26,8 +26,14 @@ export class MailDetails extends React.Component {
         });
     }
     addReply = (replyInfo) => {
-        return mailService.createReplays(replyInfo);
+        mailService.createReplays(replyInfo).then(() => this.props.history.push('/Mail'))
     }
+
+    closeModal = () => {
+        const { isReply } = this.state;
+        this.setState({ isReply: !isReply })
+    }
+
 
     render() {
         const { mail, isReply } = this.state;
@@ -46,11 +52,11 @@ export class MailDetails extends React.Component {
             </div>
             <div className="nav-btns flex space-between">
                 <button className="back-btn" onClick={() => this.props.history.push('/Mail')}>Back</button>
-                <button className="reply-btn" onClick={() => this.setState({ isReply: !isReply })}>Reply</button>
+                <button className="reply-btn" onClick={this.closeModal}>Reply</button>
             </div>
-            <form className={`new-mail-container flex column ${isReply ? '' : 'hidden'}`}>
-                <NewReply addReply={this.addReply} />
-            </form>
+            <div className={`new-mail-container flex column ${isReply ? '' : 'hidden'}`}>
+                <NewReply addReply={this.addReply} closeModal={this.closeModal} />
+            </div>
         </section>
     }
 }

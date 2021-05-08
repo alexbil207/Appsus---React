@@ -32,7 +32,6 @@ export class MailApp extends React.Component {
         this.setState({ isNewClicked: !isNewClicked })
     }
     onFilterChange = (filterBy) => {
-        console.log(filterBy)
         this.setState({ filterBy }, () => this.loadMails())
     }
 

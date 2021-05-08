@@ -17,6 +17,14 @@ const KEY = 'notes';
 var gNotes = [
     {
         id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/7VE.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
+    },
+    {
+        id: utilService.makeId(),
         type: "todo",
         isPinned: true,
         tasks: ['sleep', 'sprint3', 'learn react!'],
@@ -33,11 +41,27 @@ var gNotes = [
     },
     {
         id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/XOsX.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
+    },
+    {
+        id: utilService.makeId(),
         type: "video",
         isPinned: false,
         url: 'https://www.youtube.com/embed/KRqIkTlGIOE',
         createdAt: Date.now(),
         color: "pink",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/4SHX.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
     },
     {
         id: utilService.makeId(),
@@ -62,6 +86,14 @@ var gNotes = [
         tasks: ['add text notes', 'add video notes', 'add todos notes'],
         createdAt: Date.now(),
         color: "pink",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/14Um.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
     },
     {
         id: utilService.makeId(),
@@ -90,6 +122,14 @@ var gNotes = [
     {
         id: utilService.makeId(),
         type: "photo",
+        url: 'https://i.gifer.com/VZvx.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
         url: 'https://s18670.pcdn.co/wp-content/uploads/WAT-Funny-Staff-Meeting_Feature.jpg',
         isPinned: false,
         createdAt: Date.now(),
@@ -102,6 +142,14 @@ var gNotes = [
         text: "Buy flowers on mother's day",
         createdAt: Date.now(),
         color: "cyan",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/ZhkT.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
     },
     {
         id: utilService.makeId(),
@@ -130,6 +178,14 @@ var gNotes = [
     {
         id: utilService.makeId(),
         type: "photo",
+        url: 'https://i.gifer.com/WwaQ.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
         url: 'https://veryfunnypics.eu/wp-content/uploads/2021/01/funny-pictures-tired-baby-700x792.jpg',
         isPinned: false,
         createdAt: Date.now(),
@@ -142,6 +198,14 @@ var gNotes = [
         text: "add cool functions to NotesApp.jsx",
         createdAt: Date.now(),
         color: "green-pastel",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/46uk.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "greenish",
     },
     {
         id: utilService.makeId(),
@@ -166,6 +230,14 @@ var gNotes = [
         isPinned: false,
         createdAt: Date.now(),
         color: "yellow",
+    },
+    {
+        id: utilService.makeId(),
+        type: "photo",
+        url: 'https://i.gifer.com/3Ufn.gif',
+        isPinned: false,
+        createdAt: Date.now(),
+        color: "pink",
     },
 
 ];

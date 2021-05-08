@@ -66,9 +66,8 @@
 }
 
 .unread {
-  background-color: #530000;
-  color: white;
-  opacity: 0.8;
+  background-color: white;
+  color: #810000;
 }
 
 @media (max-width: 670px) {
